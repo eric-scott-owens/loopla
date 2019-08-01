@@ -1,0 +1,58 @@
+@import '../../variables';
+@import '../../mixins';
+
+// WARNING -- NOT ACTUALLY DONE -- Anne save this!
+
+.o-email-preview {
+
+  background-color: $gray-200;
+  color: $black;
+  margin: $spacing-md 0 $spacing-normal;
+  padding: 0 $spacing-xl $spacing-xl;
+
+  .o-email-subject {
+    background-color: $gray-300;
+    color: $black;
+    
+    margin-top: 0;
+    margin-bottom: $spacing-xl;
+    margin-left: - ($spacing-xl);
+    margin-right: - ($spacing-xl);
+    
+    padding-top: $spacing-sm;
+    padding-bottom: $spacing-sm;
+    padding-left: $spacing-xl;
+    padding-right: $spacing-xl;
+  }
+
+  .btn-primary, .btn {
+    opacity: .7;
+    border: none;
+
+    &:hover, &:not(:disabled):not(.disabled) {
+      background-color: $color-1;
+      color: #fff;
+      cursor: default;
+      box-shadow: none;
+      opacity: .7;
+      border: none;
+    }
+
+    &:not(:disabled):not(.disabled):active {
+      background-color: $color-1;
+      color: #fff;
+      cursor: default;
+      box-shadow: none;
+      opacity: .7;
+      border: none;
+    }
+  }
+
+  .o-email-footer {
+    .o-loopla-link {
+      font-weight: 600;
+      color: $gray-800; 
+      text-decoration: none;
+    }
+  }
+}

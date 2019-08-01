@@ -1,0 +1,74 @@
+@import "~bootstrap/scss/variables";
+@import "./variables";
+
+$radius: 8px;
+
+//
+// Headings
+//
+
+$headings-font-family:  'Montserrat', sans-serif;
+// $headings-color: 
+
+h1, .h1 { font-size: $h1-font-size; }
+h2, .h2 { font-size: $h2-font-size; }
+h3, .h3 { font-size: $h3-font-size; }
+h4, .h4 { font-size: $h4-font-size; }
+h5, .h5 { font-size: $h5-font-size; }
+h6, .h6 { font-size: $h6-font-size; }
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      'Nunito', sans-serif;
+
+//
+// Color system
+//
+
+// $white:    #fff;
+// $gray-100: #f8f9fa;
+// $gray-200: #e9ecef;
+// $gray-300: #dee2e6;
+// $gray-400: #ced4da;
+// $gray-500: #adb5bd;
+// $gray-600: #6c757d;
+// $gray-700: #495057;
+// $gray-800: #343a40;
+// $gray-900: #212529;
+// $black:    #000;
+
+$blue:    $color-1; /* loopla blue */
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    $color-5; /* loopla pink */
+$red:     $color-6; /* loopla red */
+$orange:  $color-4; /* loopla orange */
+$yellow:  #ffc107;
+$green:   $color-3; /* loopla green */
+$teal:    $color-2; /* loopla teal */
+$cyan:    #17a2b8;
+
+// commented out until we make changes
+// $primary:       $blue;
+// $secondary:     $gray-600;
+// $success:       $green;
+// $info:          $cyan;
+// $warning:       $yellow;
+// $danger:        $red;
+// $light:         $gray-100;
+// $dark:          $gray-800;
+
+// Settings for the `<body>` element.
+
+// $body-bg:                   $white;
+// $body-color:                $gray-900;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                theme-color("primary");
+$link-hover-color:          darken($link-color, 15%);

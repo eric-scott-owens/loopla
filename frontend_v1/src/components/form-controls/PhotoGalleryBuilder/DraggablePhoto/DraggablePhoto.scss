@@ -1,0 +1,35 @@
+@import "../../../../variables";
+@import "../../../../mixins";
+
+.o-gallery-photo {
+  position: relative;
+  // margin-right: 6px;
+
+  .o-photo-details {
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    width: 100%;
+
+    .o-form-control {
+      .form-control {
+        background-color: rgba($white, 0.85);
+      }
+    }
+
+    .form-group {
+      margin: 0 2px 12px;
+    }
+  }
+
+  .o-delete-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .o-icon-button {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

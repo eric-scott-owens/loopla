@@ -1,0 +1,37 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+.o-phone-number-field {
+  
+  .react-phone-number-input__country-select-arrow {
+    color: $black;
+  }
+
+  .react-phone-number-input__icon-image {
+    vertical-align: top;
+  }
+
+  .react-phone-number-input {
+    // to match .form-control from Form.scss
+    height: auto;
+    margin: 0 0 10px 0;
+    background-color: #f0f1f2;
+    padding: 15px 18px;
+    border: none;
+    border-radius: 0;
+  }
+
+  .react-phone-number-input__input {
+    // to match .form-control from Form.scss
+    font-family: "Nunito", sans-serif;
+    color: $black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+    text-align: left;
+    height: auto;
+    border-bottom: none;
+    background-color: transparent;
+  }
+}

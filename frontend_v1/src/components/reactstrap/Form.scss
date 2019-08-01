@@ -1,0 +1,22 @@
+@import "../../variables";
+@import "../../mixins";
+
+.form-control {
+  @include form-control-normal;
+
+  .o-form-reverse & {
+    @include form-control-reverse;
+  }
+}
+
+.form-group {
+
+  margin-bottom: 10px;
+
+  &::-webkit-input-placeholder, /* Chrome/Opera/Safari */
+  &::-moz-placeholder, /* Firefox 19+ */
+  &:-ms-input-placeholder, /* IE 10+ */
+  &:-moz-placeholder { /* Firefox 18- */  
+    @include input-placeholder-text;
+  } 
+}

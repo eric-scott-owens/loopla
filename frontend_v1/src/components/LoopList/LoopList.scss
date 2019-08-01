@@ -1,0 +1,32 @@
+@import "../../variables";
+@import "../../mixins";
+
+.o-loop-list {
+  .o-loop-name a {
+    @include loop-name-text;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  .list-group-item:first-child {
+    border-top-left-radius: $border-radius-normal;
+    border-top-right-radius: $border-radius-normal;
+  }
+
+  .list-group-item:last-child {
+    border-bottom-right-radius: $border-radius-normal;
+    border-bottom-left-radius: $border-radius-normal;
+  }
+
+  .o-loop-list-item {
+    background-color: $gray-100;
+  
+    &:hover {
+      background-color: $gray-300;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+body {
+  &.o-page--privacy-policy {
+    background: $gradient-2;
+  }
+}

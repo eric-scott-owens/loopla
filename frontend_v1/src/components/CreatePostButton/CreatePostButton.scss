@@ -1,0 +1,15 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-create-post-button {
+
+  &.o-icon-text-button {
+  
+    .o-text-wrapper {
+      // font-weight: $font-weight-bold;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+        
+    }
+  }
+}

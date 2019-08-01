@@ -1,0 +1,29 @@
+@import "../../../mixins";
+@import "../../../variables";
+
+.o-select-list {
+
+  position: relative;
+
+  .form-control {
+    height: 49px;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+
+  &:after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 21px;
+    right: 18px;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid rgba(0,0,0,.5);
+    transition: all .2s cubic-bezier(.25,.46,.45,.94);
+    z-index: 800;
+  }
+}

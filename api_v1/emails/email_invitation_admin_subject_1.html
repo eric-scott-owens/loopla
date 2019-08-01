@@ -1,0 +1,8 @@
+{% spaceless %}
+<!-- Generates subject in email. If this string exceeds the character limit, it will be replaced with version 2 (invitation_admin_subject.2.html) or version 3 -->
+{% if user.person.middle_name %}
+{{ user.first_name }} {{ user.person.middle_name }} {{ user.last_name }} has invited you to be an organizer of {{ group.circle.name }}
+{% else %}
+{{ user.first_name }} {{ user.last_name }} has invited you to be an organizer of {{ group.circle.name }}
+{% endif %}
+{% endspaceless %}

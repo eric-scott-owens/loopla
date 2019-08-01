@@ -1,0 +1,108 @@
+@import "../../variables";
+@import "../../mixins";
+
+.o-page {
+  border-radius: $border-radius-normal;
+  box-shadow: $box-shadow-subtle;
+  background-color: $white;
+
+  // Extra Small devices
+  @media (max-width: 767px) {
+    padding: $page-spacing-y-xs $page-spacing-x-xs;
+    margin: 0 -15px;
+    border: 0;
+    box-shadow: none;
+    padding-bottom: 80px;
+    border-radius: 0;
+  }
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    padding: $page-spacing-y-sm $page-spacing-x-sm;
+    margin-bottom: $page-margin-bottom-normal;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    padding: $page-spacing-y-md $page-spacing-x-md;
+    margin-bottom: $page-margin-bottom-normal;
+  }
+  
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    padding: $page-spacing-y-lg $page-spacing-x-lg;
+    margin-bottom: $page-margin-bottom-normal;
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    padding: $page-spacing-y-xl $page-spacing-x-xl;
+    margin-bottom: $page-margin-bottom-normal;
+  }
+
+  // B O R D E R L E S S  P A G E  S T Y L I N G
+  // For pages that don't have a white background, border or drop shadow
+  // Add o-page-borderless class to Page
+
+  // Examples:
+  // UserProfile.jsx (just the loop filter part)
+
+  &.o-page-borderless {
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+  
+    // Extra Small and Small devices
+    @media (max-width: 767px) {
+      padding: $page-spacing-y-xs $page-spacing-x-xs;
+      margin: 0 -15px;
+      border: 0;
+      box-shadow: none;
+      padding-bottom: 80px;
+      border-radius: 0;
+    }
+  
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      padding: $page-spacing-y-md $page-spacing-x-md;
+      margin-bottom: $page-margin-bottom-normal;
+    }
+    
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+      padding: $page-spacing-y-lg $page-spacing-x-lg;
+      margin-bottom: $page-margin-bottom-normal;
+    }
+  
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+      padding: $page-spacing-y-xl $page-spacing-x-xl;
+      margin-bottom: $page-margin-bottom-normal;
+    }
+  }
+
+  // A L T E R N A T E  P A G E  S T Y L I N G
+  // For pages that don't take up the full height and width in mobile
+  // Add o-page-alt class to Page
+
+  // Examples:
+  // LoginView.jsx  ForgotPasswordView.jsx  ForgotPasswordConfirm.jsx
+
+  &.o-page-alt {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: $spacing-normal;
+    padding-bottom: $spacing-normal;
+
+    // Medium devices (tablets, 768px and up)
+    @media (max-width: 767px) {
+      margin-top: 12px;
+    }
+
+    .o-section-width {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+}

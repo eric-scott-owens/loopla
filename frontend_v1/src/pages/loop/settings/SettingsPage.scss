@@ -1,0 +1,73 @@
+@import "../../../mixins";
+@import "../../../variables";
+
+
+body[class*="o-page--loop--"][class*="--settings"] {
+  // background: $color-1-neutral;
+}
+
+.o-loop-settings {
+
+  .o-toolbar.o-toolbar-position-absolute.o-toolbar-top.o-loop-details-edit {
+    top: 42px;
+    right: 6px;
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      right: $page-spacing-x-md;
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+      right: $page-spacing-x-lg;
+    }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+      right: $page-spacing-x-xl;
+    }
+  }
+
+  .o-loop-name-title {
+    @include loop-name-text;
+    text-transform: none;
+    font-size: 18px;
+  }
+
+  .o-loop-info {
+    // text-transform: uppercase;
+    @include subtitle-text;
+    color: $gray-700;
+    font-size: 12px;
+  }
+
+  .o-loop-settings-nav-tab{
+    padding: 0 6px 0 6px;
+  }
+
+  .o-loop-description {
+    margin-top: 2px;
+    margin-bottom: 6px;
+  }
+
+  .o-invitation-modal-button {
+    margin-bottom: 12px;
+  }
+
+  .o-membership-buttons {
+    margin-bottom: 18px;
+  }
+}
+
+.o-loop-invitation-link-body {
+  margin-bottom: 30px;
+
+  .o-loop-invitation-link-new {
+    display: block;
+    margin-top: 6px;
+  }
+
+  .o-loop-invitation-link-disable {
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,80 @@
+@import "../../mixins";
+@import "../../variables";
+
+.modal {
+
+  .o-responsive-modal {
+    @media (min-width: 576px) {
+      max-width: 560px;
+    }
+    @media (min-width: 768px) {
+      max-width: 750px;
+    }
+  }
+
+  .modal-content {
+    border: none;
+    border-radius: $border-radius-normal;
+  }
+
+  .modal-header {
+    padding: $spacing-normal $spacing-normal 0;
+    border-bottom: none;
+    border-top-left-radius: $border-radius-normal;
+    border-top-right-radius: $border-radius-normal;
+    display: block;
+
+    .modal-title {
+      @include title-text;
+      margin: $spacing-lg 0 0;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 26px;
+      font-weight: 600;
+      text-align: center;
+      color: rgba(0,0,0,0.8);
+      text-decoration: none;
+      margin: 24px 0 0;
+      line-height: 1.5em;
+  }
+
+  .o-modal-img {
+    margin: $spacing-normal 0;
+  }
+
+    .close {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      font-size: 14px;
+    }
+  }
+
+  .o-modal-form-heading {
+    font-family: $font-2;
+    font-size: $font-size-title;
+    font-weight: $font-weight-body;
+    line-height: $line-height-title;
+    margin: 20px 0 10px;
+  }
+
+  .modal-body {
+    padding: $spacing-md $spacing-normal 0;
+
+    .o-modal-subhead {
+      font-family: $font-2;
+      font-size: $font-size-title;
+      line-height: $line-height-title;
+      color: $text-color-medium;
+      margin-bottom: $spacing-normal;
+    }
+  }
+
+  .modal-footer {
+    padding: $spacing-md $spacing-normal 0;
+    border-top: none;
+  }
+}
+
+
+

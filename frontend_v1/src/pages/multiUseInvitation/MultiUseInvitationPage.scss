@@ -1,0 +1,115 @@
+@import "../../variables";
+@import "../../mixins";
+
+body {
+  &[class*="o-page--join-loop"] {
+    background: $black;
+    padding-top: $page-top;
+  }
+ }
+
+.o-link-disabled-text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  margin: 50px 0;
+  color: $gray-400;
+}
+
+[class*="o-page--join-loop"] {
+
+  .o-responsive-page-container-nav {
+    // Hide the login button in the top navbar
+    .o-top-navbar-side.o-top-navbar-right-side { display: none; }
+  }
+
+  .o-responsive-page-container {
+    margin: 0 -15px;
+
+    .o-full-width-section-content {
+      margin: 0 auto;
+    }
+  }
+}
+
+.o-invitation-page { 
+  text-align: center;
+
+  .o-invitation-header {
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: none;
+
+  }
+
+  .o-invitation-subhead {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: $black;
+    margin: 30px 0 12px;
+  }
+
+ .o-invitation-loop-details {
+    color: $black;
+    margin: 30px auto 0;
+  }
+
+  .o-invitation-loop-details,
+  .o-invitation-loop-details .o-date {
+    @include subtitle-text;
+    color: $black;
+    text-transform: none;
+  }
+
+  .o-invitation-list-button {
+    @include link-text-underline;
+    display: block;
+    margin: auto;
+    color: $gray-600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    border-bottom: 1px solid $gray-600;
+
+    &:hover {
+      color: $black;
+      border-bottom: 1px solid $black;
+    }
+  }
+}
+
+.o-invitation-list-modal {
+
+  &.modal-dialog {
+    max-width: 600px;
+  }
+
+  .o-invitation-loop-details {
+    text-align: center;
+    margin-bottom: $spacing-sm;
+  }
+
+  .o-loop-description {
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: $spacing-normal;
+  }
+  
+  .o-invitation-list {
+
+    .o-invitation-list-title {
+      @include subtitle-text;
+      margin-bottom: $spacing-sm;
+    }
+
+    @media (max-width: 575px) {
+      div:nth-of-type(2) {
+        margin-top: $spacing-lg;
+        padding-top: $spacing-lg;
+        border-top: 1px solid $gray-300;
+      }
+    }
+  }
+}

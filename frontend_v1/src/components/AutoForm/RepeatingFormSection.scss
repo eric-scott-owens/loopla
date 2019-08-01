@@ -1,0 +1,38 @@
+@import "../../mixins";
+@import "../../variables";
+
+
+.o-repeating-form-section {
+
+  .o-xs-divider {
+    @media (max-width: 767px) {
+      border-top: 1px solid $gray-300;
+      padding-top: 24px;
+      margin-top: 8px;
+    }
+  }
+
+  .o-icon-text-button {
+
+    .o-button-wrapper {
+
+      .o-icon-button {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+      }
+    }
+
+    svg {
+      margin-right: 6px;
+      font-size: 30px;
+      padding: 3px;
+    }
+  }
+
+  .o-delete-line {
+    svg {
+      margin: 16px 0 0 0;
+    }
+  }
+}

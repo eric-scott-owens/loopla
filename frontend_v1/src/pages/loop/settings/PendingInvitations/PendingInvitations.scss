@@ -1,0 +1,27 @@
+@import "../../../../variables";
+@import "../../../../mixins";
+
+.o-loop-settings-pending-invitations {
+
+  .o-member-info {
+    margin: 6px 0 18px;
+    line-height: 1.2;
+    font-size: 13px;
+    color: $gray-600;
+    letter-spacing: .4px;
+
+    .o-person-name {
+      @include title-text;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: $spacing-xs;
+    }
+
+    .o-date {
+      font-size: 13px;
+      color: $gray-600;
+      letter-spacing: .4px;
+    }
+  }
+}

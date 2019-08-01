@@ -1,0 +1,138 @@
+@import "../../variables";
+@import "../../mixins";
+
+.o-user-byline {
+  position: relative;
+  padding-right: 110px; // Make space for the date and menu
+  padding-left: 30px; // Make space for te user avatar
+  line-height: 25px; // Center all the content on the size of the User Avatar
+
+  @media (min-width: 576px) {
+    padding-left: 0; // User avatar no longer takes up space
+    line-height: inherit;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .o-user-avatar {
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+
+    .o-user-avatar-img {
+      @include user-avatar-xs;
+      // margin-right: $spacing-sm;
+
+      // Small devices (landscape phones, 576px and up)
+      @media (min-width: 576px) {
+        margin-left: -($user-avatar-sm + $spacing-sm);
+        // margin-right: $spacing-sm;
+        @include user-avatar-sm;
+      }
+
+      // Medium devices (tablets, 768px and up)
+      @media (min-width: 768px) {
+        margin-left: -($user-avatar-sm + $spacing-sm);
+        // margin-right: $spacing-sm;
+        @include user-avatar-sm;
+      }
+      
+      // Large devices (desktops, 992px and up)
+      @media (min-width: 992px) {
+        margin-left: -($user-avatar-md + $spacing-sm);
+        // margin-right: $spacing-sm;
+        @include user-avatar-md;
+      }
+
+      // Extra large devices (large desktops, 1200px and up)
+      @media (min-width: 1200px) {
+        margin-left: -($user-avatar-md + $spacing-sm);
+        // margin-right: $spacing-sm;
+        @include user-avatar-md;
+      }
+    }
+  }
+
+  .o-user-byline-center {
+    padding-top: 3px;
+
+    .o-user-byline-center-A {
+      // Small devices (landscape phones, 576px and up)
+      @media (min-width: 576px) {
+      }
+    }
+
+    .o-user-byline-center-B {
+      display: block;
+      line-height: 1;
+
+      // Small devices (landscape phones, 576px and up)
+      @media (min-width: 576px) {
+        display: inline-block;
+
+        .o-loop-name::before {
+          display: inline-block;
+          content: '';
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+          height: 2px;
+          width: 2px;
+          margin-right: 6px;
+          margin-left: 6px;
+          vertical-align: 2px;
+          background-color: $text-color;
+        }
+      }
+    }
+  }
+
+  .o-user-byline-right {
+    position: absolute;
+    right: 0;
+    top: 3px;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      top: 2px;
+    }
+
+    .dropdown {
+      display: inline;
+
+      .btn {
+        padding: 0;
+      }
+    }
+  }
+
+  .o-date {
+    margin-top: 6px;
+  }
+
+  .o-kudos-wrapper {
+    float: right;
+    margin-top: 4px;
+    margin-left: $spacing-md;
+
+    &.circle {
+      font-size: 17px;
+    }
+
+    .o-kudos-icon-given {
+      color: $gray-600;
+      margin-left: 3px;
+    }
+
+    .o-kudos-icon-received {
+      color: $color-4;
+      margin-left: 3px;
+    }
+
+    .o-kudos-icon-empty {
+      color: $gray-400;
+      margin-left: 3px;
+    }
+  }
+}

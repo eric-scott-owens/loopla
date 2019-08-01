@@ -1,0 +1,24 @@
+.o-arrow {
+  position: absolute;
+  font-weight: 500;
+  padding: 8px 10px 9px 10px;
+  cursor: pointer;
+  z-index: 800;
+
+  &.o-right-arrow{
+    right: -20px;
+    margin: 1px 0 0 20px;
+    background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,0));
+  }
+
+  &.o-left-arrow {
+    left: -20px;
+    margin: 1px 20px 0 0;
+    background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,1), rgba(255,255,255,0));
+  }
+  
+  &.o-pushed-down-arrow {
+    margin-top: 7px;
+    padding-bottom: 11px;
+  }
+}

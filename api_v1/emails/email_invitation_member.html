@@ -1,0 +1,69 @@
+{% extends "email_template_04.html" %}
+
+
+<!-- Email title -->
+{% block title %}
+  Loopla Member Invitation
+{% endblock %}
+
+
+<!-- Email background color | Default is #faefda -->
+{% block backgroundColor1 %}
+  #faefda
+{% endblock %}
+
+
+<!-- Add center alignment for center body including text and button -->
+{% block align %}
+align="center"
+{% endblock %}
+
+<!-- Headline -->
+{% block headline %}
+  Please join the discussion in the {{ group.circle.name }} Loop.
+{% endblock %}
+
+
+<!-- Main image -->
+{% block mainImage %}
+  {{EMAIL_SITE_RESOURCES_URL}}frontend_v1/media/monsters/loopla_monster_group.png
+{% endblock %}
+
+{% block mainImageWidth %}
+  400
+{% endblock %}
+
+
+<!-- Body content -->
+{% block bodyContent %}
+  Get in the loop.<br />
+  Private group Q & A on<br />
+  the topics that matter to you.
+{% endblock %}
+
+<!-- Secondary image -->
+{% block image2 %}
+  {{EMAIL_SITE_RESOURCES_URL}}frontend_v1/media/monsters/Q&A_categories.png
+{% endblock %}
+
+
+<!-- Button link -->
+{% block buttonLink %}
+  {{ url }}
+{% endblock %}
+
+
+<!-- Button text -->
+{% block buttonText %}
+  View Invitation
+{% endblock %}
+
+
+<!-- Bottom section background color | Default is #f3f9eb -->
+{% block backgroundColorBottom %}
+  #f3f9eb
+{% endblock %}
+
+<!-- Unsubscribe button not present -->
+{% block unsubscribe %}
+{% endblock %}

@@ -1,0 +1,208 @@
+//
+// Color system
+//
+
+$white:    #fff;
+$gray-100: #fafafc;
+$gray-200: #f0f1f2;
+$gray-300: #e1e3e5;
+$gray-400: #c4c7cb;
+$gray-500: #989ea4;
+$gray-600: #6c757d;
+$gray-700: #4b5157;
+$gray-800: #343a40;
+$gray-900: #1e262c;
+$black:    #011b28;
+
+$gray-bkgd:#edeeef;
+$background-color: $gray-bkgd;
+
+$color-1: rgba(62,169,245,1); // loopla blue
+$color-2: rgba(0,169,157,1);  // loopla teal
+$color-3: rgba(139,197,62,1); // loopla green
+$color-4: rgba(247,146,30,1); // loopla orange
+$color-5: rgba(255,41,111,1); // loopla pink
+$color-6: rgba(236,29,35,1);  // loopla red
+$color-7: rgba(1,27,40,1);    // loopla black
+$color-8: rgba(26,49,61,1);   // dark gray blue
+
+$color-1-hex: #3ea9f5; // loopla blue
+$color-2-hex: #00a99d; // loopla teal
+$color-3-hex: #8bc53e; // loopla green
+$color-4-hex: #f7921e; // loopla orange
+$color-5-hex: #ff296f; // loopla pink
+$color-6-hex: #ec1d23; // loopla red
+$color-7-hex: #011b28; // loopla black 
+$color-8-hex: #1A313B; // dark gray blue
+
+$color-1-neutral: #9098a0;  // loopla blue neutral tone
+$color-2-neutral: #5e7f7d;  // loopla teal neutral tone
+$color-3-neutral: #516D4D;  // loopla green neutral tone
+$color-4-neutral: #f28f57;  // loopla orange neutral tone
+$color-5-neutral: #fff;     // find loopla pink neutral tone
+$color-6-neutral: #fff;     // find loopla red neutral tone
+$color-8-neutral: #787e84;
+
+$text-color:        $black;
+$title-color:       $gray-800;
+$text-color-light:  $white;
+$text-color-medium: $gray-600;
+$text-color-dark:   $black;
+$link-color:        darken( $color-1, 10% );
+
+$gradient-1: linear-gradient(to right, $color-4 0%, $color-5 100%);  // orange to pink
+$gradient-2: linear-gradient(to right, $color-1 0%, $color-3 100%);  // blue to green
+$gradient-3: linear-gradient(to right, $color-1 0%, #8f2add 100%); // blue to purple
+$gradient-4: linear-gradient(to right, $color-2 0%, #4fc457 100%);  // teal to green
+$gradient-5: radial-gradient(ellipse at center, lighten( $color-8, 3% ) 0%, $color-8 100%); // loopla black radial
+$gradient-6: radial-gradient(ellipse at center, lighten( $color-3, 3% ) 0%, $color-3 100%); // loopla green radial
+
+$gradient-neutral-4: linear-gradient(45deg, #fa8f6b 0%,#e19f6c 100%); // neutral orange to neutral orange2
+
+//
+// Text
+//
+
+$font-size-tiny: 12px;
+$font-size-body-mobile: 13px;
+$font-size-body: 14px;
+$font-size-title: 18px;     //h2
+$font-size-md-title: 22px;  //h3
+$font-size-lg-title: 26px;  //h1
+$font-size-icon-button: 13px;
+
+$letter-spacing-tiny: .5px;
+$letter-spacing-body: .2px;
+$letter-spacing-title: .5px;
+$letter-spacing-lg: 1px;
+$letter-spacing-xl: 2.5px;
+
+$line-height-tiny:  1.3;
+$line-height-body:  1.4;
+$line-height-title: 1.5;
+
+$font-weight-tiny: 300;
+$font-weight-body: 300;
+$font-weight-title: 500;
+$font-weight-lg-title: 600;
+$font-weight-bold: 700;
+
+$font-1: 'Nunito', sans-serif;
+$font-2: 'Montserrat', sans-serif;
+
+//
+// Spacing
+//
+
+$spacing-xs: 3px;
+$spacing-sm: 6px;
+$spacing-md: 12px;
+$spacing-lg: 18px;
+$spacing-xl: 24px;
+$spacing-xxl: 36px;
+
+$spacing-normal: 30px;
+$spacing-section: 30px;
+
+$page-margin-top-xs: 80px;
+$page-margin-top-normal: 100px;
+
+$page-margin-padding-xs: 12px;
+$page-margin-padding-sm: 12px;
+$page-margin-padding-md: 60px;
+$page-margin-padding-lg: 100px;
+$page-margin-padding-xl: 120px;
+
+$page-margin-bottom-xs: 30px;
+$page-margin-bottom-normal: 50px;
+
+$page-spacing-x-xs: 24px;
+$page-spacing-x-sm: 60px;
+$page-spacing-x-md: 60px;
+$page-spacing-x-lg: 70px;
+$page-spacing-x-xl: 80px;
+
+$page-spacing-y-xs: 0;
+$page-spacing-y-sm: 0;
+$page-spacing-y-md: 0;
+$page-spacing-y-lg: 0;
+$page-spacing-y-xl: 0;
+
+$toolbar-margin: 30px;
+
+//
+// Page Top
+//
+
+// These values are equal to the height of the navbar
+// Change these values when navbar is changed
+
+$navbar-height: 66px; /* change this value if you change navbar */
+$navbar-height-mobile: 42px; /* change this value if you change navbar */
+
+$page-top: $navbar-height;
+$page-top-mobile: $navbar-height-mobile; // Extra Small and Small devices
+
+//
+// Avatars
+//
+
+$user-avatar-xs: 25px;
+$user-avatar-sm: 35px;
+$user-avatar-md: 40px;
+$user-avatar-lg: 50px;
+
+//
+// Borders
+//
+
+$border-normal: 2px solid $black;
+
+$border-radius-small: 3px;
+$border-radius-normal: 3px;
+$border-radius-button: 0;
+$border-radius-tab-corner: 0;
+
+//
+// Shadows
+//
+
+$box-shadow-normal: 6px 6px 0 0 rgba($black, 0.25);
+// $box-shadow-subtle: 5px 5px 20px -10px rgba($black, 0.05);
+$box-shadow-subtle: 2px 2px 2px 0px rgba(1, 27, 40, 0.06), 3px 3px 9px 4px rgba($black, 0.03); // like v1
+// $box-shadow-subtle: 3px 3px 9px 4px rgba($black, 0.05);
+$box-shadow-hover: 2px 2px 2px 0px rgba(1, 27, 40, 0.06), 0 0 40px -5px rgba($black, 0.25);
+$box-shadow-lg:  0 0 20px 1px rgba($black, 0.25);
+$box-shadow-editing: 0 0 30px 4px $gray-400;
+
+$box-shadow-card:   2px 6px 8px 0 rgba($black, 0.1),
+                    -2px 6px 8px 0 rgba($black, 0.1),
+                    0 6px 6px 0 rgba($black, 0.1),
+                    0 -1px 4px 0 rgba($black, 0.1);
+
+$box-shadow-layer-1: 10px 10px 0 0 rgba(0,0,0,0.1);
+$box-shadow-layer-2: 10px 10px 0 0 rgba(62,169,245,0.05); //loopla blue
+
+//
+// Loop Page
+//
+
+$loop-header-top-mobile: $page-top-mobile;
+$loop-header-top: $page-top;
+$loop-header-sm: 40px;
+$loop-header-lg: 194px;
+// $loop-header-sm: auto;   These work to make the header the correct height
+// $loop-header-lg: auto;   But break the loop header!!!!
+
+//
+// Transitions
+//
+
+$transition-normal: all 0.2s ease-in-out;
+$transition-slow: all 1s ease-in-out;
+
+// Export variables to JS with Webpack
+:export {
+  pagetop: $page-top;
+  pagetopMobile: $page-top-mobile;
+}

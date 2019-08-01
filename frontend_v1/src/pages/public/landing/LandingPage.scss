@@ -1,0 +1,48 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+
+body {
+  &.o-page--landing_page {
+    padding-top: $page-top;
+  }
+}
+
+.o-page--landing_page {
+  background-color: $black;
+
+  .o-responsive-page-container {
+    margin: 0 -15px;
+  }
+}
+
+.o-landing-page {
+  text-align: center;
+
+  .o-toolbar {
+
+    &.o-toolbar-position-fixed.o-toolbar-left {
+      left: 0;
+
+      .o-toolbar-contents {
+        left: 0;
+      }
+    }
+  }
+
+  .o-landing-page-back-button {
+
+    &:before {
+      content: "";
+      height: 5px;
+      position: absolute;
+      width: 0;
+      margin-left: -14px;
+      margin-top: 4px;
+      background: transparent;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-right: 5px solid $white; 
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-icon-button {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  transition: $transition-normal;
+
+  svg {
+    font-size: 20px;
+    color: $text-color-medium;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+
+  // Shape: Circle
+  &.circle {
+    background-color: $gray-500;
+    border-radius: 50%;
+
+    svg {
+      color: white;
+      font-size: 40px;
+      padding: 10px;
+    }
+
+    &:hover {
+      background-color: $color-1;
+    }
+  }
+
+  // Shape: Square
+  &.square {
+    background-color: $gray-500;
+
+    svg {
+      border-radius: 0;
+      color: white;
+      font-size: 40px;
+      padding: 10px;
+      }
+
+    &:hover {
+      background-color: $color-1;
+    }
+  }
+
+  // Color: Primary
+  &.o-icon-button-primary {
+    background-color: $color-1;
+    color: $white;
+
+    &:hover {
+      background-color: darken( $color-1, 10% );
+    }
+  }
+
+  // Color: Secondary
+  &.o-icon-button-secondary {
+    background-color: $gray-500;
+    color: $white;
+  }
+
+  // Color: Default
+  // &.o-icon-button-default {
+  //   background-color: $gray-500;
+  //   color: $white;
+  // }
+}

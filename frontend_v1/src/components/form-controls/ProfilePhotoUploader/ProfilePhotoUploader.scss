@@ -1,0 +1,74 @@
+@import "../../../mixins";
+@import "../../../variables";
+
+.o-profile-photo-uploader {
+
+  .o-profile-photo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 12px;
+    border: 3px dashed $gray-400;
+    border-radius: 50%;
+    
+    .o-profile-photo-drop-zone {
+      position: absolute !important; // override DropZone's inline position: relative
+      top: 10px;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      cursor: pointer;
+  
+      .o-toggle-picker {
+        cursor: pointer;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+    }
+
+  }
+
+  .drop-zone {
+    min-height: 100px;
+    width: 230px;
+    height: 230px;
+    left: 50%;
+    margin-left: -115px;
+    padding: 37px;
+    @include input-placeholder-text;
+    text-align: center;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 3px dashed rgba($black, 0.25);
+    border-radius: $border-radius-normal;
+
+    transition:
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      border-color: $color-1;
+      color: $color-1;
+    }
+
+    .o-drop-zone-text {
+      margin-left: $spacing-md;
+    }
+
+    .o-tiny-drop-zone-text {
+      @include input-placeholder-text;
+      text-align: center;
+      font-size: 11px;
+    }
+  }
+
+  .invalid-feedback {
+    display: block;
+  }
+}

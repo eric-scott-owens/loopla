@@ -1,0 +1,13 @@
+@import "../../variables";
+@import "../../mixins";
+
+.o-user-avatar {
+  .o-user-avatar-img {
+    border-radius: 50%;
+    background-color: $gray-300;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display:inline-block;
+  }  
+}

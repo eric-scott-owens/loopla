@@ -1,0 +1,90 @@
+@import "../../variables";
+@import "../../mixins";
+
+.o-search-bar {
+
+  .form-control {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    border: none;
+    height: 30px; 
+    color: $gray-100;
+
+    &:focus {
+      color: $gray-700;
+    }
+  }
+
+  .form-control.input::placeholder,
+  .form-control::placeholder,
+  .form-control:-ms-input-placeholder,
+  .form-control::-ms-input-placeholder,
+  .form-control::-webkit-input-placeholder,
+  .form-control::-moz-placeholder,
+  .form-control:-moz-placeholder {
+    color: $gray-500;
+    opacity: 1;
+  }
+
+  &.input-group {
+    height: 30px;
+  }
+
+  .input-group-append {
+    margin-left: 0;
+  }
+
+  .o-button-search {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgba(255,255,255,0.2);
+    border: none;
+    font-size: 12px;
+
+    i {
+      color: $gray-500;
+    }
+
+    &:hover {
+      background-color: rgba(255,255,255,0.4);
+    }
+  }
+
+  .o-clear-search-addon {
+    position: absolute;
+    z-index:100;
+    right: 36px;
+
+    .o-button-clear-search {
+      background-color: transparent;
+      border: none;
+      font-size: 12px;
+      color: $black;
+
+      i {
+        color: $gray-500;
+      }
+
+      &:hover {
+        color: red;
+      }
+
+
+    }
+  }
+
+ &.input-is-focused {
+
+    .btn-1 { 
+  
+      .o-button-clear-search {
+        background-color: white;
+  
+        i {
+          color: $gray-500;
+        }
+  
+      }
+    }
+  }
+}

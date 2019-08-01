@@ -1,0 +1,20 @@
+@import "../../variables";
+@import "../../mixins";
+
+.o-basic-button {
+
+}
+
+.o-button-error-alert {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  color: maroon;
+  padding: 3px 6px;
+  font-size: 14px;
+
+  svg {
+    margin-right: 3px;
+    font-size: 20px;
+  }
+}

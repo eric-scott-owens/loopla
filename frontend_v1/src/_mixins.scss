@@ -1,0 +1,304 @@
+// 
+// Text
+// 
+
+@mixin tiny-text {
+  font-family: $font-1;
+  color: $text-color;
+  font-size: $font-size-tiny;
+  font-weight: $font-weight-tiny;
+  line-height: $line-height-tiny;
+  letter-spacing: $letter-spacing-tiny;
+}
+
+@mixin body-text {
+  font-family: $font-1;
+  color: $text-color;
+  font-size: $font-size-body-mobile;
+  font-weight: $font-weight-body;
+  line-height: $line-height-body;
+  letter-spacing: $letter-spacing-body;
+  text-align: left;
+  word-break: break-word;
+  white-space: pre-wrap;
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    font-size: $font-size-body;
+  }
+}
+
+@mixin body-text-size {
+  font-size: $font-size-body-mobile;
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    font-size: $font-size-body;
+  }
+}
+
+@mixin place-text {
+  font-family: $font-1;
+  color: $text-color;
+  font-size: $font-size-body - 2px;
+  font-weight: $font-weight-body;
+  line-height: $line-height-body;
+  letter-spacing: $letter-spacing-body;
+  text-align: left;
+}
+
+@mixin title-text {
+  font-family: $font-2;
+  font-size: $font-size-title;
+  font-weight: $font-weight-title;
+  color: $title-color;
+  line-height: $line-height-title;
+  letter-spacing: $letter-spacing-title;
+  text-decoration: none;
+  margin: 0;
+}
+
+@mixin post-title-text {
+  font-family: $font-2;
+  text-align: left;
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: $title-color;
+  margin: 10px 0 0;
+  padding: 0;
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    font-size: 32px;
+    line-height: $line-height-title;
+  }
+}
+
+@mixin subtitle-text {
+  font-family: $font-1;
+  color: $text-color;
+  font-size: $font-size-body;
+  font-weight: $font-weight-title;
+  line-height: $line-height-body;
+  letter-spacing: $letter-spacing-lg;
+  text-transform: uppercase;
+}
+
+@mixin loop-name-text {
+  font-family: $font-2;
+  font-size: ($font-size-body + 2px);
+  font-weight: $font-weight-title;
+  line-height: $line-height-title;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $text-color;
+  margin: 0;
+}
+
+@mixin person-name-text {
+  font-family: $font-1;
+  color: $black;
+  font-size: ($font-size-body + 2px);
+  font-weight: $font-weight-bold;
+  line-height: $line-height-body;
+  letter-spacing: $letter-spacing-title;
+  text-align: left;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+@mixin person-name-link {
+  &:hover {
+    color: $black;
+    text-decoration: none;
+    border-bottom: 1px solid $black;
+  }
+}
+
+@mixin dont-break-out {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+
+// 
+// Links
+// 
+
+@mixin link-text {
+  @include body-text;
+  border: 0;
+  transition: 
+    color 0.15s ease-in-out,
+    border-bottom 0.15s ease-in-out;
+  
+  &:hover {
+    color: $link-color;
+    text-decoration: none;
+  }
+}
+
+@mixin link-text-bold {
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: $font-weight-lg-title;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-align: inherit;
+  border: 0;
+  transition: 
+    color 0.15s ease-in-out,
+    border-bottom 0.15s ease-in-out;
+  
+  &:hover {
+    color: $link-color;
+    text-decoration: none;
+  }
+}
+
+@mixin link-text-underline {
+  @include link-text;
+  color: $link-color;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    text-decoration: none;
+    color: $text-color;
+    border-bottom: 1px solid $text-color;
+  }
+}
+
+@mixin link-text-color {
+  @include link-text;
+  color: $link-color;
+
+  &:hover {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+//
+// Form Control
+//
+
+@mixin input-placeholder-text {
+  font-family: $font-1;
+  color: $gray-500;
+  font-size: $font-size-body;
+  font-weight: 400;
+  line-height: $line-height-body;
+  letter-spacing: $letter-spacing-body;
+  text-align: left;
+}
+
+@mixin form-control-normal {
+  height: auto;
+  margin: 0 0 10px 0;
+  background-color: $gray-200;
+  padding: 15px 18px;
+  border: none;
+  border-radius: 0;
+  @include body-text;
+
+  &::-webkit-input-placeholder, /* Chrome/Opera/Safari */
+  &::-moz-placeholder, /* Firefox 19+ */
+  &:-ms-input-placeholder, /* IE 10+ */
+  &:-moz-placeholder { /* Firefox 18- */  
+    @include input-placeholder-text;
+  } 
+
+  &:placeholder-shown:focus { background-color: $gray-200; }
+
+  &:focus {
+    background-color: $gray-200;
+    border: none;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+@mixin form-control-reverse {
+  height: auto;
+  margin: 0 0 10px 0;
+  background-color: $white;
+  padding: 15px 18px;
+  border: none;
+  border-radius: 0;
+
+  &::-webkit-input-placeholder, /* Chrome/Opera/Safari */
+  &::-moz-placeholder, /* Firefox 19+ */
+  &:-ms-input-placeholder, /* IE 10+ */
+  &:-moz-placeholder { /* Firefox 18- */  
+    @include input-placeholder-text;
+  } 
+
+  &:placeholder-shown:focus { background-color: $white; }
+  &:focus { background-color: $white; }
+}
+
+// 
+// Spacing
+// 
+
+@mixin component-padding-sm {
+  padding-top: $spacing-sm;
+  padding-bottom: $spacing-sm;
+}
+
+@mixin component-padding-md {
+  padding-top: $spacing-md;
+  padding-bottom: $spacing-md;
+}
+
+// 
+// Avatars
+// 
+
+@mixin user-avatar-xs {
+  height: $user-avatar-xs;
+  width: $user-avatar-xs;
+}
+
+@mixin user-avatar-sm {
+  height: $user-avatar-sm;
+  width: $user-avatar-sm;
+}
+
+@mixin user-avatar-md {
+  height: $user-avatar-md;
+  width: $user-avatar-md;
+}
+
+@mixin user-avatar-lg {
+  height: $user-avatar-lg;
+  width: $user-avatar-lg;
+}
+
+// 
+// Utilities
+// 
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}

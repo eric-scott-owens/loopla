@@ -1,0 +1,188 @@
+{% extends "email_template_01.html" %}
+
+
+<!-- Email title -->
+{% block title %}
+  Loopla Activity Summary
+{% endblock %}
+
+
+<!-- Email background color | Default is #faefda -->
+{% block backgroundColor1 %}
+  #faefda
+{% endblock %}
+
+
+<!-- Main image -->
+{% block mainImage %}
+  {{EMAIL_SITE_RESOURCES_URL}}frontend_v1/media/monsters/loopla_monster_mug.png
+{% endblock %}
+
+
+<!-- Main image width | Default is 600 (full width) -->
+{% block mainImageWidth %}
+400
+{% endblock %}
+
+
+<!-- Headline -->
+{% block headline %}
+  {{summary_content.user.first_name}}, here's what's happening!
+{% endblock %}
+
+
+<!-- Replaces the entire body text of email, not including image or headline -->
+{% block fullBody %}
+  {% for group in summary_content.groups %}
+  {% if group.n_new_posts != 0 or group.n_new_comments != 0 %}
+  <!-- ************* loop name ************* -->
+  <h2 style="
+    color: #545454;
+    display: block;
+    font-family: Helvetica;
+    font-size: 22px;
+    line-height: 1.455em;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: .5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 24px;
+    margin-bottom: 6px;
+    text-align: left;">
+    <strong>{{ group.circle.name }}</strong>
+  </h2>
+  {% if group.n_new_posts != 0 %}
+
+  <!-- ************* post count ************* -->
+  <!-- <h3 style="
+    color: #545454;
+    display: block;
+    font-family: Helvetica;
+    font-size: 18px;
+    line-height: 1.455em;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    text-align: left;">
+    {% if group.n_new_comments == 1 %}
+    <strong>{{ group.n_new_posts }} new post</strong>
+    {% else %}
+    <strong>{{ group.n_new_posts }} new posts</strong>
+    {% endif %}
+  </h3>  -->
+  
+  <!-- ************* post list ************* -->
+  <p style="
+    color: #545454;
+    display: block;
+    font-family: Helvetica;
+    font-size: 14px;
+    line-height: 1.500em;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.1px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    text-align: left;">
+    {% for post in group.posts %}
+    <a href="{{ post.url }}" target="_blank" style="
+      text-decoration: none;
+      color: #545454;">    
+      <strong>{{ post.summary }}</strong> 
+    </a>
+    by
+      <a href="{{ summary_content.user.url }}" target="_blank" style="
+      text-decoration: none;
+      color: #545454;">    
+        <strong>{{ post.owner.first_name }} {{ post.owner.last_name }}</strong> 
+      </a><br />
+    
+    {% endfor %}
+  </p>
+  {% endif %}
+  
+  {% if group.n_new_comments != 0 %}
+
+  <!-- ************* comment count ************* -->
+  <!-- <h3 style="
+    color: #545454;
+    display: block;
+    font-family: Helvetica;
+    font-size: 18px;
+    line-height: 1.455em;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 6px;
+    text-align: left;">
+    {% if group.n_new_comments == 1 %}
+    <strong>{{ group.n_new_comments }} new comment</strong>
+    {% else %}
+    <strong>{{ group.n_new_comments }} new comments</strong>
+    {% endif %}
+  </h3> -->
+  
+  <!-- ************* comment list ************* -->
+  <p style="
+    color: #545454;
+    display: block;
+    font-family: Helvetica;
+    font-size: 14px;
+    line-height: 1.5em;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.1px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    text-align: left;">
+    
+    {% for post_with_comment in group.posts_with_comments %}
+    {% if post_with_comment.num_comments_on_post == 1 %}
+    <strong>{{ post_with_comment.num_comments_on_post }} new comment</strong>
+    {% else %}
+    <strong>{{ post_with_comment.num_comments_on_post }} new comments</strong>
+    {% endif %}
+     on&nbsp;<a href="{{ post_with_comment.url }}" target="_blank" style="
+     text-decoration: none;
+     color: #545454;"><strong>{{ post_with_comment.summary }}</strong></a> <br />
+    {%endfor%}
+  </p>
+  {% endif %}
+
+  <!-- ************* loop button ************* -->
+  <a href="{{ group.url }}" target="_blank" style="
+    background: #3ea9f5;
+    display: inline-block;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 0;
+    border-radius: 2px;
+    background-clip: padding-box;
+    text-align: left;">
+    <strong>View Loop</strong>
+  </a>
+  {% endif %}
+  {% endfor %}
+{% endblock fullBody %}
+
+
+<!-- Bottom section background color | Default is #f3f9eb -->
+{% block backgroundColorBottom %}
+  #f3f9eb
+{% endblock %}

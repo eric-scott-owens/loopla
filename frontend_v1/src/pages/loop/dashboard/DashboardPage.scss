@@ -1,0 +1,54 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+body[class*="o-page--loop--"][class*="--dashboard"] {
+  padding-top: ( $loop-header-top + $loop-header-lg + $spacing-normal );
+  background-color: $background-color;
+  // background-color: $gray-300;
+
+  // The padding-top defined here doesn't work perfectly.
+  // The height of the loop header changes depending
+  // on the truncated loop description and the length of
+  // the particular tags that are shown.
+
+  // CUSTOM breakpoint (close to small)
+  @media (min-width: 420px) {
+    padding-top: ( $loop-header-top + $loop-header-lg + $spacing-sm );
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    padding-top: ( $loop-header-top + $loop-header-lg + $spacing-normal );
+  }
+}
+
+.react-joyride__tooltip h4 {
+  @include title-text;
+}
+
+.o-notification-button-container {
+  position: sticky;
+  top: 98px;
+  z-index: 900;
+
+  @media (min-width: 768px) {
+    top: 110px;
+   }
+
+  .o-notification-button {
+    background-color: $color-4;
+    color: $white;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    margin-bottom: 12px;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: $box-shadow-subtle;
+
+    .o-button-icon svg {
+      font-size: 16px;
+      vertical-align: -4px;
+      margin-right: 6px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../variables";
+@import "../../mixins";
+
+// 
+// Dropdowns
+// 
+
+.dropdown-menu  {
+  border-radius: 0;
+  box-shadow: $box-shadow-subtle;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 900;
+}

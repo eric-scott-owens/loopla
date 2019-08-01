@@ -1,0 +1,17 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-mentioned-places {
+  
+  .o-mentioned-place {
+    margin-bottom: $spacing-normal;
+  }
+  
+  .o-place-attribution {
+    @include body-text;
+    
+    .o-user-display-name {
+      @include link-text;
+    }
+  }
+}

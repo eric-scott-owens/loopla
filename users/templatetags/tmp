@@ -1,0 +1,14 @@
+
+
+    <p>Member.id = {{m.member.id}}</p>
+    <p>Group.id = {{group.id}}</p>
+
+
+   {% for m in membership %}
+
+    <p>Member.id = {{m.user}}</p>
+    <p>Group.id = {{m.group}}</p>
+
+    
+
+    {% endfor %}

@@ -1,0 +1,154 @@
+<!--
+SIMPLE EMAIL TEMPLATE
+=====================
+Includes one content container with an image and a body content area.
+No bottom area with Loopla description. 
+-->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{% block title %}Loopla{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <style type="text/css">
+    /* Force Hotmail to display normal line spacing */
+    body,table,td,p,a,li,blockquote { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100% }
+  
+    /* Prevent WebKit and Windows mobile changing default text sizes */
+    table,td { mso-table-lspace: 0;  mso-table-rspace: 0 }
+  
+    a:visited { color:#3ea9f5; text-decoration: none; }
+    a:focus { color:#3ea9f5; text-decoration: none; }
+    a:hover { color:#3ea9f5; text-decoration: underline; }
+    a:link { color:#3ea9f5; text-decoration: none; }
+    a .yshortcuts { color:#3ea9f5; text-decoration: none; }
+  </style>
+</head>
+
+<body bgcolor="#ffffff" style="margin: 0; padding: 0; min-width: 100%;">
+
+  <table border="0" cellpadding="10" cellspacing="0" width="100%" style="
+    background-color: #ffffff;
+    border-collapse: collapse !important;">
+    <tr>
+      <td>
+
+        <!-- 600px width begins -->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" class="content" style="
+          background-color: #ffffff;
+          border-collapse: collapse !important;
+          width: 100%;
+          max-width: 600px;">
+        
+          <!-- ******************************************************** -->
+          <!-- ******************** Header Section ******************** -->
+          <!-- ******************************************************** -->
+          <tr>
+            <td align="top" style="font-size: 14px; padding-top: 2.5em; padding-bottom: 1.5em; text-align: center;">
+              <a href="https://www.loopla.com/" target="_blank">
+                <img  src="{% block logo %}{{EMAIL_SITE_RESOURCES_URL}}frontend_v1/media/logo/loopla_logo.png{% endblock %}" height="auto" width="150" style="
+                  display: inline-block; max-width: 100%; border: 0; line-height: 100%; outline: none; text-decoration: none;" />
+              </a>
+            </td>
+          </tr>
+
+          <!-- ****************************************************** -->
+          <!-- ******************** Main Section ******************** -->
+          <!-- ****************************************************** -->
+          <tr>
+            <td 
+              valign="top" style="
+              background-color: {% block backgroundColor1 %}#faefda{% endblock %};
+              /* display: flex;
+              flex-direction: row;
+              align-items: center; */
+              border-radius: 12px 12px 0 0;
+              color: #505050;
+              font-family: Helvetica;
+              font-size: 16px;
+              line-height: 150%;
+              padding-top: 12px;
+              padding-bottom: 3em;
+              ">
+
+              <p style="margin-bottom: 30px; text-align: center;">
+                <img  src="{% block mainImage %}{{EMAIL_SITE_RESOURCES_URL}}frontend_v1/media/monsters/loopla_monster_mug.png{% endblock %}" height="auto" width="{% block mainImageWidth %}600{% endblock %}" style="
+                display: inline-block;
+                max-width: 100%;
+                border: 0;
+                line-height: 100%;
+                outline: none;
+                text-decoration: none;" />
+              </p>
+
+              {% block fullBody %}
+              <!-- Add content here -->
+              {% endblock %}
+
+              <a href="{% block buttonLink %}{% endblock %}" target="_blank" style="
+                background: #3ea9f5;
+                display: block;
+                color: #FFFFFF;
+                padding: 10px 20px;
+                text-decoration: none;
+                font-size: 14px;
+                letter-spacing: 1px;
+                position: relative;
+                margin: auto;
+                margin-top: 1em;
+                width: 120px;
+                border-radius: 30px;
+                background-clip: padding-box;
+                text-align: center;">
+                <strong>{% block buttonText %}View Your Loop{% endblock %}</strong>
+              </a>
+
+            </td>
+          </tr>
+
+          <!-- ******************************************************** -->
+          <!-- ******************** Footer Section ******************** -->
+          <!-- ******************************************************** -->
+          <tr>
+            <td align="center" valign="top" width="100%">
+              <h6 style="
+                color: #a1a1a1;
+                display: block;
+                font-family: Helvetica;
+                font-size: 12px;
+                line-height: 1.5em;
+                font-style: normal;
+                font-weight: normal;
+                letter-spacing: normal;">
+                <span style="
+                color: #c6c6c6;
+                display: block;
+                font-family: Helvetica;
+                font-size: 10px;
+                line-height: 1.5em;
+                font-style: normal;
+                font-weight: normal;
+                letter-spacing: .2px;">
+                {% block unsubscribe %}Go to your <a href="{{BASE_URL}}/users/{{user_id}}/settings">user settings</a> to unsubscribe or change your notification preferences</span>{% endblock %}
+                Made with&nbsp;&hearts;&nbsp;in Pittsburgh PA&nbsp;&middot;&nbsp;
+                <a href="mailto:{{NOTIFICATIONS_SERVICE_ADMIN_EMAIL_ADDRESS}}" target="_blank" style="color: #a1a1a1; text-decoration: none; font-weight: normal;">
+                  {{NOTIFICATIONS_SERVICE_ADMIN_EMAIL_ADDRESS}}
+                </a>
+              </h6>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  {% if read_receipt_url %}
+  {# email opened tracking #}
+  <img src="{{read_receipt_url}}" style="width:1px;height:1px" />
+  {% endif %}
+</body>

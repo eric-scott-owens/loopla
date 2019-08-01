@@ -1,0 +1,67 @@
+@import "../../variables";
+@import "../../mixins";
+
+.o-contributor-list {
+  margin: 0 -18px;
+  padding: 6px 18px 2px;
+  @include body-text;
+  font-size: 12px;
+  height: 43px;
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    font-size: 12px;
+  }
+
+  .o-post-author-avatar {
+
+    &.o-user-avatar {
+  
+      .o-user-avatar-img {
+        width: 35px;
+        height: 35px;
+        border: 2px solid white;
+      }
+    }
+  }
+
+  .o-contributor-list-count {
+    // font-weight: 600;
+  }
+
+  .o-user-avatar {
+    // padding-right: $spacing-sm;
+
+    .o-user-avatar-img {
+      width: 30px;
+      height: 30px;
+      border: 2px solid white;
+    }
+  }
+
+  .o-user-avatar + .o-user-avatar {
+    margin-left: -12px;
+  }
+
+  .o-contributor-count-zero {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .5px;
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .o-contributor-count {
+    margin-left: 4px;
+    vertical-align: 10px;
+    text-align: left;
+
+    .o-contributor-count-number {
+      // font-weight: 700;
+    }
+  }
+  .o-contributor-list-float-right{
+    float: right;
+  }
+}

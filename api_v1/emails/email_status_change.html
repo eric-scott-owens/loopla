@@ -1,0 +1,15 @@
+{% spaceless %}
+<span class="h-invitee-name">{{ invitee_first_name|default_if_none:"[Person's Name]" }},</span><br>
+{% if change == 'admin_to_member' %}
+Your role has changed from organizer to member for the {{ group.circle.name }} Loop.
+{% elif change == 'admin_to_inactive' or change == 'member_to_inactive' %}
+Your status has changed to inactive membership in the {{ group|default_if_none:"[Loop Name]" }} loop. You will continue to be able to view existing posts but will not be able to make new posts or view new posts.
+{% elif change == 'remove_admin' or change == 'remove_member' or change == 'remove_inactive' %}
+You have been removed as a member of the {{ group.circle.name }} Loop.
+{% elif change == 'inactive_to_member' %}
+You are reinstated as an active member of the {{ group.circle.name }} Loop. You may now make new posts and view new posts.
+{% endif %}
+{% endspaceless %}
+<br>
+<br>
+<p class="h-personal-message">{{ optional_message|default_if_none:"[Your note will be inserted here]" }}</p>

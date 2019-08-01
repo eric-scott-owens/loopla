@@ -1,0 +1,94 @@
+@import "../../variables";
+@import "../../mixins";
+
+.o-documentation-page {
+
+  h2 {
+    margin-top: $spacing-normal;
+  }
+  
+  .o-sub-section {
+    padding-left: $spacing-md;
+  }
+  
+  //
+  // Text
+  //
+  
+  // Fonts
+  .o-font-1-lg {
+    font-family: $font-1;
+    line-height: 1;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .o-font-2-lg {
+    font-family: $font-2;
+    line-height: 1;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  // Text Mixins
+  .o-heading {
+    @include title-text;
+    margin-top: $spacing-lg;
+  }
+  
+  .o-subheading {
+    @include subtitle-text;
+    margin-top: $spacing-lg;
+  }
+  
+  .o-body-text {
+    @include body-text;
+    margin-top: $spacing-lg;
+  }
+  
+  // Text Colors
+  
+  .o-text-color-title { color: $title-color; }
+  .o-text-color { color: $text-color; }
+  .o-text-color-light { color: $text-color-light; background-color: $gray-600; }
+  .o-text-color-medium { color: $text-color-medium; }
+  .o-text-color-dark { color: $text-color-dark; }
+  .o-text-color-link { color: $link-color; }
+  
+  //
+  // Color
+  //
+  
+  div[class^="color"] {
+    @include subtitle-text;
+    padding: $spacing-normal;
+  }
+  
+  // Loopla Colors
+  .color-loopla-1 { background-color: $color-1; }
+  .color-loopla-2 { background-color: $color-2; }
+  .color-loopla-3 { background-color: $color-3; }
+  .color-loopla-4 { background-color: $color-4; }
+  .color-loopla-5 { background-color: $color-5; }
+  .color-loopla-6 { background-color: $color-6; }
+  
+  // Grays
+  .color-box-0  { background-color: $white; }
+  .color-box-1  { background-color: $gray-100; }
+  .color-box-2  { background-color: $gray-200; }
+  .color-box-3  { background-color: $gray-300; }
+  .color-box-4  { background-color: $gray-400; }
+  .color-box-5  { background-color: $gray-500; }
+  .color-box-6  { background-color: $gray-600; }
+  .color-box-7  { background-color: $gray-700; }
+  .color-box-8  { background-color: $gray-800; color: $text-color-light; }
+  .color-box-9  { background-color: $gray-900; color: $text-color-light; }
+  .color-box-10 { background-color: $black; color: $text-color-light; }
+  
+  div.color-box-5,
+  div.color-box-6,
+  div.color-box-7,
+  div.color-box-8, 
+  div.color-box-9,
+  div.color-box-10 { color: $text-color-light; }
+}

@@ -1,0 +1,8 @@
+@import "./mixins";
+@import "./variables";
+
+.o-truncate-text-helper {
+  font-size: 12px;
+  color: $gray-600;
+  margin-top: 2px;
+}

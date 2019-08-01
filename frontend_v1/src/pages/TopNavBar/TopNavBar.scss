@@ -1,0 +1,114 @@
+@import "../../variables";
+@import "../../mixins";
+
+// Change the value of $page-top in _variables.scss
+// when navbar height changes
+
+.o-top-navbar {
+  background-color: $color-7 !important;
+  height: 42px;
+
+  @media (min-width: 768px) {
+    height: 66px;
+  }
+
+  &.bg-dark {
+    background-color: $color-7 !important;
+  }
+
+  .o-top-navbar-side {
+    width: 50%;
+    height: 30px;
+    display:inline-block;
+    position: relative;
+
+    @media (min-width: 768px) {
+      height: 50px;
+    }
+  }
+
+  .o-top-navbar-left-side {
+    padding-right: 78px; // Make space for logo
+
+    .o-search-nav-item {
+      padding-top: 9px; // Center vertically
+    }
+  }
+
+  .o-top-navbar-right-side {
+    padding-left: 78px; // Make space for logo
+
+    .nav {
+      display: block;
+      text-align: right;
+
+      .nav-item {
+        display: inline-block;
+
+        &.o-nav-item-spacing {
+          margin-right: 20px;
+        }
+
+        a {
+          display:block;
+          padding: 13px 10px;
+          @media (max-width: 768px)
+          {
+            padding: 0 10px;
+          }
+          font-family: $font-1;
+          font-weight: 400;
+          font-size: 12px;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+          line-height: 24px;
+
+          color: $gray-500;
+
+          &:hover {
+            color: $text-color-light;
+          }
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  // Provide pixel perfect centering, positioning, and spacing for logo
+  .o-top-navbar-logo {
+    position: absolute;
+    z-index: 900;
+    left:50%;
+    top:-7px;
+    margin-left: -52px;
+
+    @media (min-width: 768px) {
+      top: 0px;
+      margin-left: -67px;
+    }
+    
+    img {
+      height: 28px;
+      width: auto; // 105 px
+      
+      @media (min-width: 768px) {
+        height: 36px;
+        width: auto; // 135 px
+      }
+    }
+  }
+
+//   &.o-logged-out {
+//     .o-navbar-brand img {
+//       margin-left: 64px;
+
+//       @media (max-width: 350px) {
+//         margin-left: 0;
+//       }
+//     }
+//   }
+}

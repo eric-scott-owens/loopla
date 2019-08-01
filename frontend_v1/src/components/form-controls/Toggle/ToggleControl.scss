@@ -1,0 +1,58 @@
+@import '../../../variables';
+@import '../../../mixins';
+
+.o-toggle-control {
+  position: relative;
+  min-height: 30px;
+  width: 100%;
+
+  .react-toggle {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+  .react-toggle--checked .react-toggle-track {
+    background-color: $color-1;
+  }
+
+  .react-toggle--checked .react-toggle-thumb {
+    border-color: $color-1;
+}
+
+  .react-toggle-track {
+    background-color: $gray-500;
+  }
+
+  .react-toggle-thumb {
+    border: 1px solid $gray-500;
+  }
+  
+  .react-toggle:hover .react-toggle-track {
+    background-color: darken($gray-500, 20%);
+  }
+
+  .react-toggle--checked:hover .react-toggle-track {
+    background-color: darken($color-1, 20%);
+  }
+
+  label {
+    margin-left: 60px;
+    width:100%;
+    text-align: left;
+    margin-top: 3px;
+  }
+
+  &.o-toggle-control-inline {
+    width:initial;
+    display: inline-block;
+  }
+
+  &.disabled:hover {
+    cursor: not-allowed;
+
+    label:hover {
+      cursor: not-allowed;
+    }
+  }
+}

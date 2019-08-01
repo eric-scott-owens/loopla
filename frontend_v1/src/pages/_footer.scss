@@ -1,0 +1,10 @@
+@import "./../mixins";
+@import "./../variables";
+
+.o-footer {
+  padding-bottom: 0;
+
+  @media (min-width: 576px) {
+    padding-bottom: 100px;
+  }
+}

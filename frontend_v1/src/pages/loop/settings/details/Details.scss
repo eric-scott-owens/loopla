@@ -1,0 +1,17 @@
+@import "../../../../mixins";
+@import "../../../../variables";
+
+.o-loop-settings-details {
+
+  .o-loop-name-title {
+    @include loop-name-text;
+    text-transform: none;
+    font-size: 18px;
+  }
+
+  .o-loop-info {
+    @include subtitle-text;
+    color: $gray-700;
+    font-size: 12px;
+  }
+}

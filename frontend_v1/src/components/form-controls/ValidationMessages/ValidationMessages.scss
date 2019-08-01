@@ -1,0 +1,17 @@
+@import "../../../mixins";
+@import "../../../variables";
+
+.o-validation-messages {
+  display: block;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  background-color: pink;
+  padding: 0px 6px;
+  
+  &.invalid-feedback {
+    font-size: 12px;
+    color: maroon;
+    display: block !important;
+  }
+}

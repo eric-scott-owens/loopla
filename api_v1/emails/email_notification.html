@@ -1,0 +1,67 @@
+{% extends "email_template_03.html" %}
+
+
+<!-- Email title -->
+{% block title %}
+  Loopla New Content Notification
+{% endblock %}
+
+
+<!-- Email background color | Default is #faefda -->
+{% block backgroundColor1 %}
+  #faefda
+{% endblock %}
+
+
+<!-- Main image -->
+{% block mainImage %}
+  {{EMAIL_SITE_RESOURCES_URL}}frontend_v1/media/monsters/loopla_monster_squiggles.png
+{% endblock %}
+
+{% block mainImageWidth %}400{% endblock %}
+
+<!-- Content Area -->
+{% block fullBody %}
+<h1 style="
+  color:#011b28;
+  display: block;
+  font-family: Montserrat, Helvetica;
+  font-size: 24px;
+  line-height: 1.385em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: .3px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 15px;">
+  {% if message_context.notification_type == 'post' %}
+  {{message_context.poster_first_name}} {{message_context.poster_last_name}} 
+    just posted
+  {% else %}
+  {{message_context.commenter_first_name}} {{message_context.commenter_last_name}} 
+    commented on
+  {% endif %}
+  <span style="
+  font-weight: 600;">
+  {{ message_context.post_summary }}</span>
+  {% if message_context.notification_type == 'post' %}
+    to
+  {% else %}
+    in
+  {% endif %} 
+  
+  {{ message_context.group_name }}
+</h1>
+{% endblock %}
+
+
+<!-- Button link -->
+{% block buttonLink %}
+  {{ message_context.post_url }}
+{% endblock %}
+
+
+<!-- Button text -->
+{% block buttonText %}
+  View Post
+{% endblock %}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one
+  or more contributor license agreements.  See the NOTICE file
+  distributed with this work for additional information
+  regarding copyright ownership.  The ASF licenses this file
+  to you under the Apache License, Version 2.0 (the
+  "License"); you may not use this file except in compliance
+  with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing,
+  software distributed under the License is distributed on an
+  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+   KIND, either express or implied.  See the License for the
+  specific language governing permissions and limitations
+  under the License.
+-->
+<html>
+  <head>
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, see:
+      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+    Some notes:
+      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src *;"/> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    
+    <!-- 
+    ********************************************************************************
+    *** Loopla Header Stuff
+    ******************************************************************************** 
+    -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Loopla</title>
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="media/icons/Loopla-apple-touch-icon_57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="media/icons/Loopla-apple-touch-icon_72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="media/icons/Loopla-apple-touch-icon_114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="media/icons/Loopla-apple-touch-icon_144x144.png" />
+    <link rel="icon" type="image/png" href="media/icons/favicon.ico">
+  
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KDZXX2P');</script>
+    <!-- End Google Tag Manager -->
+  
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+
+    <script>
+    (function(){
+      window.Loopla = window.Loopla || {};
+      window.Loopla.config = window.Loopla.config || {};
+      
+      window.Loopla.config.SERVER_SITE_ASSETS_FROM_S3 = true;
+      window.Loopla.config.SITE_RESOURCES_URL = 'file:///android_asset/www';
+      window.Loopla.config.DEPLOYMENT_ENVIRONMENT = 'APP_PRODUCTION';
+      window.Loopla.config.RESTRICT_LOOP_CREATION = false;
+      window.Loopla.config.RESTRICT_LOOP_CREATION_ALLOWED_LOOPS = [];
+
+      window.Loopla.config.KUDOS_ENABLED = false;
+      window.Loopla.config.KUDOS_STORE_ENABLED = false;
+
+      window.Loopla.config.SOCKET_IO_SERVER_HOST = '<server_host>';
+      window.Loopla.config.SOCKET_IO_SERVER_PORT = '4001';
+    })();
+    </script>
+
+  </head>
+  <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=id"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  
+    <div id="app"></div>
+    
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=key"></script>
+    <script type="text/javascript" src="frontend_v1/scripts/bundles/main.bundle.js"></script>
+  </body>
+</html>

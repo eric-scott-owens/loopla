@@ -1,0 +1,146 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-comment-editor {
+
+  &.isActivelyEditing {
+    box-shadow: $box-shadow-editing;
+    margin-right: -$page-spacing-x-xs;
+    margin-left: -$page-spacing-x-xs;
+    padding-right: $page-spacing-x-xs;
+    padding-left: $page-spacing-x-xs;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      margin-right: -$page-spacing-x-sm;
+      margin-left: -$page-spacing-x-sm;
+      padding-right: $page-spacing-x-sm;
+      padding-left: $page-spacing-x-sm;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      margin-right: -$page-spacing-x-md;
+      margin-left: -$page-spacing-x-md;
+      padding-right: $page-spacing-x-md;
+      padding-left: $page-spacing-x-md;
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+      margin-right: -$page-spacing-x-lg;
+      margin-left: -$page-spacing-x-lg;
+      padding-right: $page-spacing-x-lg;
+      padding-left: $page-spacing-x-lg;
+    }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+      margin-right: -$page-spacing-x-xl;
+      margin-left: -$page-spacing-x-xl;
+      padding-right: $page-spacing-x-xl;
+      padding-left: $page-spacing-x-xl;
+    }
+
+    .o-comment-section {
+      margin-bottom: 0px;
+    }
+    
+  }
+
+  .o-comment-header {
+    margin-top: $spacing-xxl;
+    margin-bottom: 0;
+    padding: 10px 0;
+    background-color: rgba( $color-1, 0.7 );
+    background-color: $gray-400;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: $white;
+  }
+
+  .o-comment-section {
+    margin-top: 18px;
+    margin-bottom: -36px;
+    padding-top: $spacing-xxl;
+    padding-bottom: $spacing-xxl; // when closed
+    padding-bottom: 0; // when open
+    border-bottom-left-radius: $border-radius-normal;
+    border-bottom-right-radius: $border-radius-normal;
+    background-color: $gray-200;
+    @include clearfix;
+
+    &.closed {
+      padding-bottom: 30px;
+    }
+
+    .o-toolbar {
+      margin-bottom: 0;
+    }
+
+    .form-group {
+      // margin-bottom: 0;
+    }
+  }
+
+  .o-user-avatar {
+    margin-left: 0;
+
+    .o-user-avatar-img {
+      @include user-avatar-sm;
+      float: left;
+
+      // Extra small devices (portrait phones, less than 576px)
+      // Small devices (landscape phones, 576px and up)
+      @media (max-width: 767px) {
+        display: none;
+      }
+
+      // Medium devices (tablets, 768px and up)
+      @media (min-width: 768px) {
+        margin-left: -($user-avatar-md + $spacing-sm);
+        margin-right: $spacing-sm;
+        @include user-avatar-md;
+      }
+      
+      // Large devices (desktops, 992px and up)
+      @media (min-width: 992px) {
+        margin-left: -($user-avatar-md + $spacing-sm);
+        margin-right: $spacing-sm;
+        @include user-avatar-md;
+      }
+
+      // Extra large devices (large desktops, 1200px and up)
+      @media (min-width: 1200px) {
+        margin-left: -($user-avatar-lg + $spacing-sm);
+        margin-right: $spacing-sm;
+        @include user-avatar-lg;
+      }
+    }
+  }
+
+  .o-component-button {
+    position: relative;
+    top: 4px;
+  } 
+
+  .o-component-button + .o-component-button {
+    margin-left: 10px;
+  }
+
+  .o-photo-component { background-color: rgba($color-4, 0.2); }
+  .o-places-component { background-color: rgba($color-1, 0.2); }
+  
+  .o-photo-component .o-page-full-width-section-content,
+  .o-places-component .o-page-full-width-section-content {
+    padding-top: $spacing-sm;
+    padding-bottom: $spacing-sm;
+    margin-top: $spacing-md; 
+  }
+
+  .o-form-control-place-field {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,354 @@
+// Source: https://codepen.io/P233/pen/AtzIw
+@import "../../mixins";
+@import "../../variables";
+@import "../../pages/responsive-page-container";
+
+@mixin triangle ($size, $color, $direction) {
+  height: 0;
+  width: 0;
+
+  $width: nth($size, 1);
+  $height: nth($size, length($size));
+
+  $foreground-color: nth($color, 1);
+  $background-color: transparent !default;
+  @if (length($color) == 2) {
+    $background-color: nth($color, 2);
+  }
+
+  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+
+    $width: $width / 2;
+
+    @if $direction == up {
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+      border-bottom: $height solid $foreground-color;
+
+    } @else if $direction == right {
+      border-top: $width solid $background-color;
+      border-bottom: $width solid $background-color;
+      border-left: $height solid $foreground-color;
+
+    } @else if $direction == down {
+      border-left: $width solid $background-color;
+      border-right: $width solid $background-color;
+      border-top: $height solid $foreground-color;
+
+    } @else if $direction == left {
+      border-top: $width solid $background-color;
+      border-bottom: $width solid $background-color;
+      border-right: $height solid $foreground-color;
+    }
+  }
+
+  @else if ($direction == up-right) or ($direction == up-left) {
+    border-top: $height solid $foreground-color;
+
+    @if $direction == up-right {
+      border-left:  $width solid transparent;
+
+    } @else if $direction == up-left {
+      border-right: $width solid transparent;
+    }
+  }
+
+  @else if ($direction == down-right) or ($direction == down-left) {
+    border-bottom: $height solid $foreground-color;
+
+    @if $direction == down-right {
+      // border-left:  $width solid $background-color;
+      border-left:  $width solid transparent;
+
+    } @else if $direction == down-left {
+      // border-right: $width solid $background-color;
+      border-right: $width solid transparent;
+    }
+  }
+
+  @else if ($direction == inset-up) {
+    border-width: $height $width;
+    border-style: solid;
+    border-color: $background-color $background-color $foreground-color;
+  }
+
+  @else if ($direction == inset-down) {
+    border-width: $height $width;
+    border-style: solid;
+    border-color: $foreground-color $background-color $background-color;
+  }
+
+  @else if ($direction == inset-right) {
+    border-width: $width $height;
+    border-style: solid;
+    border-color: $background-color $background-color $background-color $foreground-color;
+  }
+
+  @else if ($direction == inset-left) {
+    border-width: $width $height;
+    border-style: solid;
+    border-color: $background-color $foreground-color $background-color $background-color;
+  }
+}
+
+// Ribbon
+
+.o-ribbon-nav-container {
+
+  [class^="ribbon-"] {
+    position: relative;
+    margin-bottom: 0;
+    &:before, &:after {
+      content: "";
+      position: absolute;
+    }
+  }
+  
+  // Ribbon-Navigation
+  .ribbon-nav {
+    width: auto;
+    min-width: 100px;
+    background-color: $color-8-neutral;
+    border: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    left: 0px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: -$page-spacing-x-xs;
+    transition: all ease-in-out .3s;
+  
+    // @media (min-width: 576px) {
+    //   left: -8px;
+    // }
+  
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      margin-top: -6px;
+      left: -8px;
+    }
+  
+    &:after {
+      @include triangle(8px, transparent, up-right);
+      top: 41px;
+      left: 0;
+  
+      @media (min-width: 768px) {
+        @include triangle(8px, darken($color-8-neutral, 15%), up-right);
+      }
+    }
+  
+    // &:after {
+    //   @include triangle(50px 15px, $color-1, right);
+    //   top: 0;
+    //   right: -15px;
+    //   border-top-color: $white;
+    //   border-bottom-color: $white;
+    // }
+  
+    &:hover {
+      background-color: darken( $color-8-neutral, 5% );
+    }
+  
+    &.ribbon-nav-primary { 
+      background-color: $color-8-neutral;
+      &:after {
+        @include triangle(8px, transparent, up-right);
+  
+        @media (min-width: 768px) {
+          @include triangle(8px, darken($color-8-neutral, 15%), up-right);
+        }
+      }
+  
+      &:hover {
+        background-color: darken( $color-8-neutral, 5% );
+      }
+    }
+    
+    &.ribbon-nav-secondary {
+      background-color: $color-2;
+      &:after {
+        @include triangle(8px, transparent, up-right);
+  
+        @media (min-width: 768px) {
+          @include triangle(8px, darken($color-2, 15%), up-right);
+        }
+      }
+  
+      &:hover {
+        background-color: darken( $color-2, 5% );
+      }
+    }
+    
+    &.ribbon-nav-warning {
+      background-color: $color-4;
+      &:after {
+        @include triangle(8px, transparent, up-right);
+  
+        @media (min-width: 768px) {
+          @include triangle(8px, darken($color-4, 15%), up-right);
+        }
+      }
+  
+      &:hover {
+        background-color: darken( $color-4, 5% );
+      }
+    }
+    
+    &.ribbon-nav-loop {
+      background-color: $color-3;
+      &:after {
+        @include triangle(8px, transparent, up-right);
+        
+        @media (min-width: 768px) {
+          @include triangle(8px, darken($color-3, 15%), up-right);
+        }
+      }
+  
+      &:hover {
+        background-color: darken( $color-3, 5% );
+      }
+    }
+  
+    &.ribbon-nav-user {
+      background-color: $color-1;
+      &:after {
+        @include triangle(8px, transparent, up-right);
+        
+        @media (min-width: 768px) {
+          @include triangle(8px, darken($color-1, 15%), up-right);
+        }
+      }
+  
+      &:hover {
+        background-color: darken( $color-1, 5% );
+      }
+    }
+    
+    .o-ribbon-text-container {
+      position: relative;
+      font-family: $font-2;
+      text-align: center;
+      color: $white;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 6px 6px 16px;
+  
+      // Medium devices (tablets, 768px and up)
+      @media (min-width: 768px) {
+        padding: 10px 18px;
+      }
+  
+      .o-ribbon-text {
+        @include subtitle-text;
+        color: $white;
+        font-weight: $font-weight-bold;
+        border-bottom: none;
+    
+        &:before {
+          content: "";
+          height: 5px;
+          position: absolute;
+          width: 0;
+          margin-left: -14px;
+          margin-top: 4px;
+          background: transparent;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-right: 5px solid $white; 
+        }
+    
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  
+  
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      margin-left: -$page-spacing-x-sm;
+    }
+  
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      margin-left: -$page-spacing-x-md;
+    }
+  
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+      margin-left: -$page-spacing-x-lg;
+    }
+  
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+      margin-left: -$page-spacing-x-xl;
+    }
+  }
+
+
+  // Sticky Ribbon Nav
+  // Sticks to the top when you scroll
+
+  @mixin sticky-nav {
+    @include responsive-page-container; 
+    position: fixed;    
+    left: 0px;
+    right: 0px;
+    z-index: 900;
+  }
+
+  &.ribbon-nav-sticky {
+    -webkit-transition-property: none;
+    -moz-transition-property: none;
+    -o-transition-property: none;
+    transition-property: none;
+
+    .ribbon-nav {
+      -webkit-transition-property: none;
+      -moz-transition-property: none;
+      -o-transition-property: none;
+      transition-property: none;
+    }
+
+    top: 72px;
+  
+    @media (max-width: 767px) {
+      @include sticky-nav;
+      top: $navbar-height-mobile;
+    }
+  }
+  
+  .o-ribbon-nav-fixed &.ribbon-nav-sticky {
+    @include sticky-nav;
+  }
+
+  &.ribbon-nav-sticky {
+    .ribbon-nav {
+      position: relative;
+    }
+
+    .o-ribbon-nav-fixed & {
+      .ribbon-nav {
+        margin-left: 12px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .o-ribbon-nav-fixed &.ribbon-nav-sticky,
+    &.ribbon-nav-sticky {
+      .ribbon-nav{
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+// Page override
+@media (max-width: 767px) {
+  .o-has-sticky-ribbon-nav .o-page {
+    padding-top: 40px;
+  }
+}

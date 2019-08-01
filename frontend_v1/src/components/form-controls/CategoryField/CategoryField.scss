@@ -1,0 +1,10 @@
+@import "../../../mixins";
+@import "../../../variables";
+
+
+.o-category-field {
+  .o-helpful-text {
+    font-size: 12px;
+    letter-spacing: .2px;
+  }
+}

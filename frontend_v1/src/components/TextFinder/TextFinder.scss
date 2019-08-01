@@ -1,0 +1,9 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-marked-match {
+  display: inline-block;
+  background-color: rgba($color-4, 0.4);
+  padding: 0 4px;
+  border-radius: 3px;
+}

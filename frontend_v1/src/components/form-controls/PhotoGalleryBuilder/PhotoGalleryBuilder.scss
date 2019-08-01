@@ -1,0 +1,84 @@
+@import "../../../mixins";
+@import "../../../variables";
+
+.o-photo-gallery-builder {
+  margin: 18px 0 30px;
+
+  &.form-group {
+    margin-bottom: 30px;
+  }
+
+  .o-gallery {
+    border: none;
+
+    .o-no-gutter {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    .o-gallery-photo {
+      width: 100%;
+      position: relative;
+      border: none;
+      text-align: center;
+
+      img {
+        max-width:100%;
+        max-height:100%;
+      }
+
+      .o-photo-details {
+        position: absolute;
+        bottom:0;
+        left:0;
+        padding: 0;
+        width: 100%;
+      }
+
+      .o-delete-photo {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .drop-zone {
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    padding: 37px;
+    @include input-placeholder-text;
+    text-align: center;
+    background-color: $white;
+    background-clip: padding-box;
+    border: 3px dashed rgba($black, 0.25);
+    border-radius: $border-radius-normal;
+    transition:
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+
+    &:hover {
+      border-color: $color-1;
+      color: $color-1;
+    }
+
+    .o-drop-zone-text {
+      margin-left: $spacing-md;
+    }
+
+    .o-tiny-drop-zone-text {
+      @include input-placeholder-text;
+      text-align: center;
+      font-size: 11px;
+    }
+  }
+
+  .photo-gallery-builder-preview {
+      margin-bottom: 12px;
+  }
+
+  .invalid-feedback {
+    display: block;
+  }
+}

@@ -1,0 +1,22 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-feedback-button {
+
+}
+  
+.o-feedback-modal {
+  .drop-zone {
+    min-height: 40px;
+    padding: 15px;
+  }
+
+  .o-feedback-text {
+    
+  }
+
+  .o-feedback-text-sm {
+    font-size: 11px;
+    margin-bottom: $spacing-normal;
+  }
+}

@@ -1,0 +1,3 @@
+import SearchResultsSummaryPostPreview from './SearchResultsSummaryPostPreview';
+
+export default SearchResultsSummaryPostPreview;

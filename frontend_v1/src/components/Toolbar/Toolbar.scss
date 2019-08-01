@@ -1,0 +1,125 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-toolbar,
+.o-toolbar.o-responsive-page-container // Used when position is set to static
+{
+  /************************************************** 
+  * Toolbar outer Container Positioning
+  **************************************************/
+  
+  // General setup for top, right, left, and most of bottom
+  // border: 5px dashed blue; /* Debugging */
+  position: relative;
+
+  &.o-toolbar-position-fixed,
+  &.o-toolbar-position-absolute {
+    z-index: 1000;
+  }
+
+  &.o-toolbar-position-fixed {
+    position: fixed;
+    top: ($navbar-height);
+  }
+
+  &.o-toolbar-position-absolute {
+    position: absolute;
+    top: 0px;
+  }
+
+  &.o-toolbar-position-fixed, 
+  &.o-toolbar-position-absolute {
+    &.o-toolbar-left,
+    &.o-toolbar-right,
+    &.o-toolbar-top,
+    &.o-toolbar-bottom {
+      left: 0px;
+      right: 0px;
+    }
+  }
+
+  // Support right & Left fixed / absolute containering
+  &.o-toolbar-position-fixed, 
+  &.o-toolbar-position-absolute {
+    &.o-toolbar-left,
+    &.o-toolbar-right {
+      height: 0px;
+    }
+  }
+
+  // Support position top offset on pages with a loop header
+  &.o-toolbar-position-fixed {
+    &.o-toolbar-left,
+    &.o-toolbar-right,
+    &.o-toolbar-top
+    {
+
+      // navbar height + loop header lg height + masonry spacing
+      .o-loop-header-large & {
+        top: ( $loop-header-top + $loop-header-lg + $spacing-normal + 20px);
+      }
+    
+      // navbar height + loop header sm height + masonry spacing
+      .o-loop-header-small & {
+        top: ( $loop-header-top + $loop-header-sm + $spacing-normal + 20px);
+      }
+    }
+  }
+
+  // Support align bottom 
+  &,
+  &.o-toolbar-position-fixed,
+  &.o-toolbar-position-absolute {
+    &.o-toolbar-align-bottom,
+    .o-loop-header-large &.o-toolbar-align-bottom,
+    .o-loop-header-small &.o-toolbar-align-bottom  {
+      top: inherit;
+      bottom: 60px;
+    }
+  }
+
+  // Support position bottom
+  &,
+  &.o-toolbar-position-fixed, 
+  &.o-toolbar-position-absolute {
+    &.o-toolbar-bottom {
+      top: inherit;
+      bottom: 0px;
+    }
+  }
+
+  /************************************************** 
+  * Toolbar Inner Contents Positioning
+  **************************************************/
+  .o-toolbar-contents {
+    // border: 5px dashed red; /* Debugging */
+    width: 100%;
+  }
+
+  &.o-toolbar-right .o-toolbar-contents {
+    position: absolute;
+    right: -30px;
+    width: 40px;
+    top: 0px;
+
+    @media (min-width: 576px) {
+      right: -45px;
+    }
+  }
+
+  &.o-toolbar-left .o-toolbar-contents {
+    position: absolute;
+    left: -30px;
+    width: 40px;
+    top: 0px;
+
+    @media (min-width: 576px) {
+      left: -45px;
+    }
+  }
+
+  &.o-toolbar-align-bottom .o-toolbar-contents {
+    top: inherit + 40px;
+    bottom: 0px;
+  }
+}

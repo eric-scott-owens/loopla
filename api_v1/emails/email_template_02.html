@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{% block title %}Loopla{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <style type="text/css">
+    /* Force Hotmail to display normal line spacing */
+    body,table,td,p,a,li,blockquote { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100% }
+  
+    /* Prevent WebKit and Windows mobile changing default text sizes */
+    table,td { mso-table-lspace: 0;  mso-table-rspace: 0 }
+  
+    a:visited { color:#3ea9f5; text-decoration: none; }
+    a:focus { color:#3ea9f5; text-decoration: none; }
+    a:hover { color:#3ea9f5; text-decoration: underline; }
+    a:link { color:#3ea9f5; text-decoration: none; }
+    a .yshortcuts { color:#3ea9f5; text-decoration: none; }
+  </style>
+</head>
+
+<body bgcolor="#ffffff" style="margin: 0; padding: 0; min-width: 100%;">
+
+  <table border="0" cellpadding="10" cellspacing="0" width="100%" style="
+    background-color: #ffffff;
+    border-collapse: collapse !important;">
+    <tr>
+      <td>
+
+        <!-- 600px width begins -->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" class="content" style="
+          background-color: #ffffff;
+          border-collapse: collapse !important;
+          width: 100%;
+          max-width: 600px;">
+        
+          <!-- ******************************************************** -->
+          <!-- ******************** Header Section ******************** -->
+          <!-- ******************************************************** -->
+          <tr>
+            <td align="top" style="font-size: 14px; padding-top: 2.5em; padding-bottom: 1.5em; text-align: center;">
+              <a href="https://www.loopla.com/" target="_blank">
+                <img  src="{% block logo %}{{EMAIL_SITE_RESOURCES_URL}}frontend_v1/media/logo/loopla_logo.png{% endblock %}" height="auto" width="150" style="
+                  display: inline-block; max-width: 100%; border: 0; line-height: 100%; outline: none; text-decoration: none;" />
+              </a>
+            </td>
+          </tr>
+
+          <!-- ***************************************************** -->
+          <!-- ******************** Top Section ******************** -->
+          <!-- ***************************************************** -->
+          <tr>
+            <td align="center" valign="top" style="
+              background-color: {% block backgroundColor1 %}#faefda{% endblock %};
+              border-radius: 12px 12px 0 0;
+              color: #505050;
+              font-family: Helvetica;
+              font-size: 16px;
+              line-height: 150%;
+              padding-top: 12px;
+              padding-bottom: 3em;
+              text-align: center;">
+
+              {% block fullBody %}
+              <p style="margin-bottom: 30px;">
+                <img  src="{% block mainImage %}{{EMAIL_SITE_RESOURCES_URL}}frontend_v1/media/monsters/loopla_monster_mug.png{% endblock %}" height="auto" width="{% block mainImageWidth %}600{% endblock %}" style="
+                display: inline-block;
+                max-width: 100%;
+                border: 0;
+                line-height: 100%;
+                outline: none;
+                text-decoration: none;" />
+              </p>
+              <h1 style="
+                color:#011b28;
+                display: block;
+                font-family: Montserrat, Helvetica;
+                font-size: 26px;
+                line-height: 1.385em;
+                font-style: normal;
+                font-weight: 600;
+                letter-spacing: .3px;
+                padding-left: 50px;
+                padding-right: 50px;
+                margin-bottom: 15px;">
+                {% block headline %}
+                {% endblock %}
+              </h1>
+              <p style="
+                color:#011b28;
+                display: block;
+                font-family: Helvetica;
+                font-size: 16px;
+                line-height: 1.444em;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: .3px;
+                padding-left: 50px;
+                padding-right: 50px;
+                margin-bottom: 15px;">
+                {% block bodyContent %}
+                {% endblock %}
+              </p>
+              <a href="{% block buttonLink %}{% endblock %}" target="_blank" style="
+                background: #3ea9f5;
+                display: block;
+                color: #FFFFFF;
+                padding: 10px 20px;
+                text-decoration: none;
+                font-size: 14px;
+                letter-spacing: 1px;
+                width: 120px;
+                margin: auto;
+                margin-top: 1em;
+                border-radius: 30px;
+                background-clip: padding-box;">
+                <strong>{% block buttonText %}{% endblock %}</strong>
+              </a>
+              {% endblock %}
+              
+            </td>
+          </tr>
+
+          <!-- ******************************************************** -->
+          <!-- ******************** Middle Section ******************** -->
+          <!-- ******************************************************** -->
+          <tr>
+            <td align="center" valign="top" style="
+              background-color: {% block backgroundColor2 %}#deecf4{% endblock %};
+              border-radius: 0;
+              color: #505050;
+              font-family: Helvetica;
+              font-size: 14px;
+              line-height: 150%;
+              padding-top: 12px;
+              padding-bottom: 3em;
+              text-align: center;">
+
+              {% block fullBody2 %}
+              <h1 style="
+                color:#011b28;
+                display: block;
+                font-family: Montserrat, Helvetica;
+                font-size: 26px;
+                line-height: 1.385em;
+                font-style: normal;
+                font-weight: 600;
+                letter-spacing: .3px;
+                padding-left: 50px;
+                padding-right: 50px;
+                margin-top: 30px;
+                margin-bottom: 15px;">
+                {% block headline2 %}
+                {% endblock %}
+              </h1>
+              <p style="margin-bottom: 30px;">
+                <img  src="{% block image2 %}{{EMAIL_SITE_RESOURCES_URL}}frontend_v1/media/monsters/loopla_monster_mug.png{% endblock %}" height="auto" width="{% block imageWidth2 %}600{% endblock %}" style="
+                display: inline-block;
+                max-width: 100%;
+                border: 0;
+                line-height: 100%;
+                outline: none;
+                text-decoration: none;" />
+              </p>
+              <a href="{% block buttonLink2 %}{% endblock %}" target="_blank" style="
+                background: #3ea9f5;
+                display: inline-block;
+                color: #FFFFFF;
+                padding: 10px 20px;
+                text-decoration: none;
+                font-size: 14px;
+                letter-spacing: 1px;
+                margin-top: 1em;
+                border-radius: 30px;
+                background-clip: padding-box;">
+                <strong>{% block buttonText2 %}{% endblock %}</strong>
+              </a>
+              {% endblock %}
+
+            </td>
+          </tr>
+
+
+          <!-- ******************************************************** -->
+          <!-- ******************** Bottom Section ******************** -->
+          <!-- ******************************************************** -->
+          <tr>
+            <td align="left" valign="top" style="
+              background-color: {% block backgroundColorBottom %}#f3f9eb{% endblock %};
+              color:#505050;
+              font-family: Helvetica;
+              font-size: 14px;
+              line-height: 150%;
+              padding-top: 2.5em;
+              padding-left: 50px;
+              padding-right: 50px;
+              padding-bottom: 2.5em;
+              background-clip: padding-box;">
+
+              <p style="text-align: left; margin-bottom: 12px;">
+                <a href="https://www.loopla.com/" target="_blank">
+                  <img src="{% block logo2 %}{{EMAIL_SITE_RESOURCES_URL}}frontend_v1/media/logo/loopla_logo.png{% endblock %}" height="auto" width="100" style="
+                  display: inline-block;
+                  max-width: 100%;
+                  border: 0;
+                  line-height: 100%;
+                  outline: none;
+                  text-decoration: none;" />
+                </a>
+              </p>
+
+              <h3 style="
+                color:#545454;
+                display: block;
+                font-family: Helvetica;
+                font-size: 18px;
+                line-height: 1.444em;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                margin-bottom: 6px;">
+                <strong>Solve life together.</strong>
+              </h3>
+                        
+              <h4 style="
+                color:#545454;
+                display: block;
+                font-family: Helvetica;
+                font-size: 14px;
+                line-height: 1.571em;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                margin-bottom: 15px;">
+                Share questions, reviews, and recommendations privately with friends. Keep track of valuable information. Make plans. Borrow gear. Stay in the loop.
+              </h4>
+                        
+              <h4 style="
+                color:#545454;
+                display: block;
+                font-family: Helvetica;
+                font-size:14px;
+                line-height: 1.571em;
+                font-style: normal;
+                font-weight: 400;
+                letter-spacing: normal;
+                margin-bottom: 15px;">
+                  <a href="https://www.loopla.com/about" target="_blank" style="
+                  color: #3ea9f5;
+                  /*display: block;*/
+                  font-family: Helvetica;
+                  font-size: 14px;
+                  line-height: 1.571em;
+                  font-style: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  text-decoration: none;">
+                  Learn More</a> about Loopla.
+              </h4>
+
+            </td>
+          </tr>
+
+          <!-- ******************************************************** -->
+          <!-- ******************** Footer Section ******************** -->
+          <!-- ******************************************************** -->
+          <tr>
+            <td align="center" valign="top" width="100%">
+              <h6 style="
+                color: #a1a1a1;
+                display: block;
+                font-family: Helvetica;
+                font-size: 12px;
+                line-height: 1.5em;
+                font-style: normal;
+                font-weight: normal;
+                letter-spacing: normal;">
+                <span style="
+                color: #c6c6c6;
+                display: block;
+                font-family: Helvetica;
+                font-size: 10px;
+                line-height: 1.5em;
+                font-style: normal;
+                font-weight: normal;
+                letter-spacing: .2px;">
+                {% block unsubscribe %}Go to your <a href="{{BASE_URL}}/users/{{user_id}}/settings">user settings</a> to unsubscribe or change your notification preferences</span>{% endblock %}
+                Made with&nbsp;&hearts;&nbsp;in Pittsburgh PA&nbsp;&middot;&nbsp;
+                <a href="mailto:{{NOTIFICATIONS_SERVICE_ADMIN_EMAIL_ADDRESS}}" target="_blank" style="color: #a1a1a1; text-decoration: none; font-weight: normal;">
+                  {{NOTIFICATIONS_SERVICE_ADMIN_EMAIL_ADDRESS}}
+                </a>
+              </h6>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  {% if read_receipt_url %}
+  {# email opened tracking #}
+  <img src="{{read_receipt_url}}" style="width:1px;height:1px" />
+  {% endif %}
+</body>

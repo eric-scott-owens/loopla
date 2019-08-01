@@ -1,0 +1,134 @@
+@import "../../variables";
+@import "../../mixins";
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: none;
+  padding: 12px 22px;
+  font-size: $font-size-tiny;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-title;
+  letter-spacing: $letter-spacing-lg;
+  text-transform: uppercase;
+  border-radius: $border-radius-button;
+  transition: $transition-normal;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn .btn-primary, .btn-primary,
+.btn .btn-success, .btn-success,
+.btn .btn-info, .btn-info,
+.btn .btn-warning, .btn-warning,
+.btn .btn-danger, .btn-danger {
+  color: $white;
+  box-shadow: $box-shadow-subtle;
+
+  &:hover {
+    background-color: darken( $color-1, 10% );
+    color: $white;
+  }
+}
+
+.btn .btn-primary, .btn-primary { background-color: $color-1; }
+.btn .btn-secondary, .btn-secondary { background-color: transparent; }
+.btn .btn-success, .btn-success { background-color: $color-3; }     // Not used yet. Change color when implemented.
+.btn .btn-info, .btn-info { background-color: $color-2; }           // Not used yet. Change color when implemented.
+.btn .btn-warning, .btn-warning { background-color: $color-4; }     // Not used yet. Change color when implemented.
+.btn .btn-danger, .btn-danger { background-color: $color-6; }       // Not used yet. Change color when implemented.
+
+.btn .btn-secondary, .btn-secondary {
+  color: $gray-500;
+
+  &:hover {
+    color: $black;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  &:active, &:focus, &:active:focus {
+    background: transparent;
+    box-shadow: none;
+  }
+ 
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  &:not(:disabled):not(.disabled):focus,
+  &:not(:disabled):not(.disabled).focus,
+  &:not(:disabled):not(.disabled):active:focus {
+    color: $black;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.btn .btn-link, .btn-link {
+  color: $color-1;
+  display: inline;
+  text-align: inherit;
+  vertical-align: inherit;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  float: none;
+  text-transform: none;
+
+  &:hover {
+    color: $black;
+    box-shadow: none;
+  }
+
+  &:focus, &.focus {
+    text-decoration: none;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+} 
+
+.btn .btn-mini, .btn-mini {
+  @include body-text;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  background-color: transparent;
+  color: $gray-500;
+  border: 1px solid $gray-500;
+  border-radius: $border-radius-button;
+  padding: 2px 8px;
+
+  &:hover {
+    background-color: $black;
+    color: $white;
+    border: 1px solid $black;
+  }
+}
+
+.btn-group-lg>.btn, .btn-lg {
+  padding: .5rem 1rem;
+  line-height: 1.5;
+}
+
+.btn-group-sm>.btn, .btn-sm {
+  padding: 6px 12px;
+  font-size: ($font-size-tiny - 2px);
+  line-height: 1.5;
+  color: $white;
+}
+
+.input-group > .input-group-append > .btn {
+  padding: 6px 12px;
+}

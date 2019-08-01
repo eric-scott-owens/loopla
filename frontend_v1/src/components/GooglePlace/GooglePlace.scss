@@ -1,0 +1,14 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-google-place {
+  .o-google-place-address,
+  .o-google-place-phone,
+  .o-google-place-website,
+  .o-google-place-address a,
+  .o-google-place-phone a,
+  .o-google-place-website a {
+    @include place-text;
+  }
+}
+

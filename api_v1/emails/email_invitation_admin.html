@@ -1,0 +1,65 @@
+{% extends "email_template_01.html" %}
+
+
+<!-- Email title -->
+{% block title %}
+  Loopla Organizer Invitation
+{% endblock %}
+
+
+<!-- Email background color | Default is #faefda -->
+{% block backgroundColor1 %}
+  #faefda
+{% endblock %}
+
+
+<!-- Add center alignment for center body including text and button -->
+{% block align %}
+align="center"
+{% endblock %}
+
+
+<!-- Main image -->
+{% block mainImage %}
+  {{EMAIL_SITE_RESOURCES_URL}}frontend_v1/media/monsters/loopla_monster_lasso_a_friend.png
+{% endblock %}
+
+
+<!-- Headline -->
+{% block headline %}
+  {{ invitee_first_name }}, join {{ user.first_name }} as an admin of {{ group.circle.name }}!
+{% endblock %}
+
+
+<!-- Body content (not including personalized note) -->
+{% block bodyContent %}
+  {% if user.person.middle_name %}
+  <p>{{ user.first_name }} {{ user.person.middle_name }} {{ user.last_name }}
+  {% else %}
+  <p>{{ user.first_name }} {{ user.last_name }}
+  {% endif %} 
+  has invited you to be an admin of {{ group.circle.name }}.
+{% endblock %}
+
+
+<!-- Button link -->
+{% block buttonLink %}
+  {{ url }}
+{% endblock %}
+
+
+<!-- Button text -->
+{% block buttonText %}
+  View Invitation
+{% endblock %}
+
+
+<!-- Bottom section background color | Default is #f3f9eb -->
+{% block backgroundColorBottom %}
+  #f3f9eb
+{% endblock %}
+
+
+<!-- Unsubscribe button not present -->
+{% block unsubscribe %}
+{% endblock %}

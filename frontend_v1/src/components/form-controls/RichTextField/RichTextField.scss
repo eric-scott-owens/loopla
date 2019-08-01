@@ -1,0 +1,45 @@
+@import "../../../mixins";
+@import "../../../variables";
+
+
+.o-form-control-rich-text-field {
+  height: auto;
+  margin: 0 0 10px 0;
+  background-color: $gray-200;
+  padding: 15px 18px;
+  border: none;
+  border-radius: 0;
+
+  a {
+    @include link-text-color;
+  }
+
+  .o-rich-text-editor-toolbar {
+    background-color: $gray-300;
+    margin: -15px -18px 14px;
+    padding: 6px;
+    display: none;
+  
+    .o-icon-button {
+      margin: 0 6px;
+
+      svg {
+        // color: $white;
+      }
+    }
+  }
+
+  &.is-focused .o-rich-text-editor-toolbar { display: block; }
+
+  .o-validation-messages.invalid-feedback {
+    position: absolute;
+    top: inherit;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+  }
+
+  &.o-form-control-rich-text-field-reverse {
+    background: $white;
+  }
+}

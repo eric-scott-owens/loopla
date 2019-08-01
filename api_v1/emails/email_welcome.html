@@ -1,0 +1,69 @@
+{% extends "email_template_02.html" %}
+
+<!-- Email title -->
+{% block title %}
+  Welcome to Loopla!
+{% endblock %}
+
+<!-- Background color | Default is #faefda -->
+{% block backgroundColor1 %}
+  #faefda
+{% endblock %}
+
+{% block mainImage %}
+  {{EMAIL_SITE_RESOURCES_URL}}frontend_v1/media/monsters/loopla_monster_wave.gif
+{% endblock %}
+
+{% block headline %}
+  Congrats! You're in the loop!
+{% endblock %}
+
+{% block bodyContent %}
+Use your username or email to login.<br />
+Your username is: {{user.username}}
+{% endblock %}
+
+{% block buttonLink %}
+  {{ BASE_URL }}
+{% endblock %}
+
+{% block buttonText %}
+  Visit Loopla
+{% endblock %}
+
+<!-- ******************************************************** -->
+<!-- ******************** Middle Section ******************** -->
+<!-- ******************************************************** -->
+
+{% block headline2 %}
+  Get to know Loopla
+{% endblock %}
+
+{% block image2 %}
+  {{EMAIL_SITE_RESOURCES_URL}}frontend_v1/media/monsters/loopla_monster_brochure.png
+{% endblock %}
+
+{% block imageWidth2 %}
+  400
+{% endblock %}
+
+{% block buttonLink2 %}
+  {{ BASE_URL }}/how-it-works/
+{% endblock %}
+
+{% block buttonText2 %}
+  How It Works
+{% endblock %}
+
+<!-- ******************************************************** -->
+<!-- ******************** Bottom Section ******************** -->
+<!-- ******************************************************** -->
+
+<!-- Background color | Default is #f3f9eb -->
+{% block backgroundColorBottom %}
+  #f3f9eb
+{% endblock %}
+
+<!-- Unsubscribe button not present -->
+{% block unsubscribe %}
+{% endblock %}

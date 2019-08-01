@@ -1,0 +1,40 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-comment {
+
+  .o-user-byline {
+
+    .o-user-byline-center-B {
+      
+      .o-date::before {
+        display: none;
+
+        // Small devices (landscape phones, 576px and up)
+        @media (min-width: 576px) {
+          display: inline-block;
+          content: '';
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+          height: 2px;
+          width: 2px;
+          margin-right: 6px;
+          margin-left: 6px;
+          vertical-align: 2px;
+          background-color: $text-color;
+        }
+      }
+    }
+  }
+  .o-comment-divider {
+    border-top: 1px solid $gray-300;
+    padding-top: 12px;
+    margin-top: 10px;
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      padding-top: 10px;
+      margin-top: 12px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+body {
+  &.o-page--careers {
+    background: $color-3;
+  }
+}
+
+.o-careers-page {
+
+  .o-page-full-width-section {;
+    background-color: $gray-200;
+  }
+
+  .o-basic-button {
+    float: none;
+    margin-top: $spacing-lg;
+  }
+}

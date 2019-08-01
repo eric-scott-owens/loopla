@@ -1,0 +1,209 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+.o-post-preview {
+  display: block;
+
+  .o-card {
+    padding: 0 18px;
+    display: block;
+    &.o-mobile-post-preview-card{
+      display: block;
+      width: 100%;
+      padding: .6em 1.2em .2em 1.2em;
+      background: rgba(255, 255, 255, 1);
+      border: 1px solid rgba($color: #000000, $alpha: .1);
+      margin-bottom: 15px;
+      .o-user-avatar {
+        .o-user-avatar-img {
+          width: 35px;
+          height: 35px;
+          border: 2px solid white;
+        }
+      }
+    }
+    &.o-desktop-post-preview-card{
+      display: block;
+    }
+    @media (min-width: 768px)
+      {
+        &.o-mobile-post-preview-card{
+          display: none;
+        }
+      }
+    @media (max-width: 768px)
+      {
+        &.o-desktop-post-preview-card{
+          display: none;
+        }
+      }
+  }
+
+  .o-card-header {
+    // border-top-left-radius: $border-radius-normal;
+    // border-top-right-radius: $border-radius-normal;
+    margin: 0 -18px 0;
+    padding: 8px 18px;
+    // background-color: rgba($color-1, 0.1);
+    // background-color: $gray-200;
+    border-bottom: 1px solid $gray-300;
+    transition: $transition-normal;
+    color: #000000;
+  }
+
+  .o-card-title {
+    @include title-text;
+    color: $black;
+    // font-size: ( $font-size-title + 4px );
+    letter-spacing: $letter-spacing-body;
+    margin: 0;
+  }
+
+  .o-post-preview-mobile-card-header{
+    display: flex;
+    flex-direction: row;
+    margin: 0 -18px 0;
+    padding: 8px 18px;
+    border-bottom: 1px solid $gray-300;
+    transition: $transition-normal;
+    
+    .o-user-avatar {
+      margin: 10px 10px 10px 0px;
+      top: 8px;
+
+      .o-user-avatar-img {
+        height: 30px;
+        width: 30px;
+      }
+    }
+    .o-post-preview-mobile-card-header-title-container{
+      position: relative;
+      width: 85%;
+    }
+    .o-post-preview-mobile-card-header-title{
+      font-size: 1.2em;
+      color: rgba($color: #000000, $alpha: 1.0);
+      position: absolute;
+      top: 15px;
+      transform: translateY(-50%);
+    }
+  }
+  .o-post-preview-body{
+    display: flex;
+    flex-direction: row;
+    .o-truncate-text{
+      width: 75%;
+      &.o-empty-truncate-text{
+        width: 100%;
+      }
+    }
+    .o-post-preview-mobile-photos{
+      height: auto;
+      margin: auto;
+    }
+  }
+  .o-user-byline {
+    // background-color: $gray-200;
+    margin: 0 -18px;
+    padding: 0 18px;
+    // height: 50px;
+    min-height: 35px;
+
+    .o-user-avatar {
+      margin-left: 18px;
+      top: 8px;
+
+      .o-user-avatar-img {
+        margin-left: 0px;
+        height: 30px;
+        width: 30px;
+      }
+    }
+
+    .o-user-byline-center {
+      padding-top: 8px;
+    
+      .o-user-display-name {
+        @include person-name-text;
+        font-weight: 600;
+        font-size: 13px;
+        
+        &:hover {
+          border-bottom: 1px solid $text-color;
+        }
+      }
+      
+      .o-user-byline-center-B {
+
+        .o-date {
+          display: none;
+        }
+      }
+    }
+
+    .o-user-byline-right {
+      top: 8px;
+      right: 18px;
+    }
+  }
+
+  .o-truncate-text {
+    @include component-padding-sm;
+    @include body-text;
+    padding: 0;
+    font-size: 13px;
+    margin-bottom: 6px;
+    .o-truncate-text-helper {
+      float: right;
+    }
+  }
+
+  .o-gallery {
+    margin: 0 -24px;
+
+    &.o-post-preview-mobile-gallery {
+      position: relative;
+      height: 100%;
+      margin: 0 -45px;
+    }
+    .react-photo-gallery--gallery {
+      margin: 0 -3px 0 -2px;
+    }
+  }
+
+  .o-place-area {
+    margin-top: $spacing-sm;
+
+    .o-place {
+      margin-bottom: $spacing-sm;
+
+      // .o-place-wrapper:hover {
+      //   background-color: rgba($color-2,0.2);
+      //   color: $title-color;
+      // }
+    }
+  }
+  .o-post-preview-cta {
+    margin: 0 -18px;
+    padding: 0 18px 2px;
+    @include body-text;
+    font-size: 12px;
+    height: 43px;
+    padding-top: $spacing-sm;
+    // border-top: 1px solid $gray-200;
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      font-size: 12px;
+    }
+
+    .o-post-preview-cta-text {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: .5px;
+      display: block;
+      text-align: right;
+      margin-top: 8px;
+      color: $color-1;
+    }
+  }
+}

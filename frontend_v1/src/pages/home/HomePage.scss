@@ -1,0 +1,20 @@
+@import "../../variables";
+@import "../../mixins";
+
+body {
+  &.o-page--home {
+    background-color: $white;
+  }
+}
+
+.o-home-page {
+  text-align: center;
+
+  h1 {
+    font-size: $font-size-lg-title;
+  }
+
+  .o-basic-button {
+    margin-top: $spacing-lg;
+  }
+}

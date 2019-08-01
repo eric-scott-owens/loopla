@@ -1,0 +1,73 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-place {
+
+  a: {
+    font-size: 14px;
+    line-height: 1.4em;
+  }
+
+  .o-place-listing-heading {
+    margin-bottom: $spacing-xs;
+    margin-right: $spacing-xs;
+  }
+
+  .o-place-wrapper {
+    display: inline-block;
+    border-radius: $border-radius-small;
+    padding: 3px 10px;
+    background-color: rgba(0,169,157,0.2);
+    line-height: 12px;
+    color: $title-color;
+    transition: $transition-normal;
+
+    &:hover {
+      background-color: rgba(0,169,157,1);
+      color: $white;
+    }
+
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    .o-place-label {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: $letter-spacing-lg;
+      line-height: 12px;
+    }
+
+    .o-delete-place-button {
+      font-size: 9px;
+      color: $text-color;
+      line-height: 1;
+      margin: 0 0 0 5px;
+      padding: 0;
+      vertical-align: 1px;
+      border: none;
+      background-color: transparent;
+  
+      &:hover {
+        color: $color-6;
+      }
+    }
+  }
+
+  .o-delete-place-button {
+    font-size: $font-size-icon-button;
+    color: $text-color;
+    line-height: 1;
+    margin: 0 0 0 5px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+      color: $color-6;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "./variables";
+@import "./mixins";
+
+.o-mobile-nav {
+  background-color: $white;
+  padding: 4px 10px;
+  box-shadow: 0px 7px 14px 3px rgba(0,0,0,0.5);
+
+  @media (min-width: 768px) {
+    padding: 10px;
+  }
+
+  .o-icon-button {
+    width: 20%;
+
+    svg {
+      font-size: 24px;
+      color: $gray-400;
+
+      &:active {
+        color: $black;
+      }
+    }
+
+    &.o-add-post-icon {
+      svg {
+        font-size: 40px;
+        color: $color-1;
+      }
+    }
+  }
+
+  .o-bottom-toolbar & {
+
+    .o-icon-button.is-active {
+      background-color: transparent;
+
+      svg {
+        color: $black;
+      }
+    }
+  }
+}

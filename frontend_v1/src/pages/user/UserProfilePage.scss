@@ -1,0 +1,7 @@
+@import "../../variables";
+@import "../../mixins";
+
+body[class*="o-page--users--"] {
+    background-color: $background-color;
+  }
+

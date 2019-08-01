@@ -1,0 +1,45 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-full-width-section {
+  background-color: $color-1;
+
+  .o-full-width-section-content {
+    margin-left: 0;
+    margin-right: 0;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      margin-left: $page-spacing-x-sm;
+      margin-right: $page-spacing-x-sm;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      margin-left: $page-spacing-x-md;
+      margin-right: $page-spacing-x-md;
+    }
+    
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+      margin-left: $page-spacing-x-lg;
+      margin-right: $page-spacing-x-lg;
+    }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+      margin-left: $page-spacing-x-xl;
+      margin-right: $page-spacing-x-xl;
+    }
+  }
+
+  .o-full-width-section-content a {
+    @include body-text;
+    color: $text-color;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+
+}

@@ -1,0 +1,24 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-gallery {
+  margin: 0 -2px;
+  
+  .o-gallery-item {
+    padding-bottom: 4px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+#lightboxBackdrop {
+
+  [class^="arrow"] {
+    background: rgba($black, 0.25) !important;
+    height: auto !important;
+    margin-top: -20px !important;
+    border-radius: 0 !important;
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../variables";
+
+.o-system-activity-indicator {
+  position: fixed;
+  top: $page-top-mobile;
+  left: 0;
+  right: 0;
+  z-index: 990;
+  
+  @media (min-width: 768px) {
+    top: $page-top;
+  }
+}

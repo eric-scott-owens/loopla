@@ -1,0 +1,66 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-icon-text-button {
+  display: inline-block;
+  border: none;
+  background: none;
+
+  .o-button-wrapper {
+    display: inline-block;
+
+    .o-icon-button {
+      font-family: $font-1;
+      width: 40px;
+      height: 40px;
+      font-size: 22px;
+      border: none;
+      box-shadow: $box-shadow-subtle;
+      transition: $transition-normal;
+    }
+  }
+
+  .o-text-wrapper {
+    display: inline-block;
+    color: $black;
+    font-size: 12px;
+    transition: $transition-normal;
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  &.vertical .o-text-wrapper,
+  &.vertical .o-button-wrapper {
+    display: block;
+  }
+
+  &.vertical .o-text-wrapper {
+    writing-mode: vertical-rl;
+    height: initial;
+    width: 40px;
+    padding-left: 0px;
+    padding-right: 12px;
+    padding-top: 10px;
+  }
+
+  &:hover {
+    background: none;
+
+    .o-text-wrapper {
+        color: $color-1;
+    }
+
+    .o-icon-button {
+      color: $link-color;
+
+      &.circle,
+      &.square {
+        background-color: $color-1;
+      }
+    }
+
+    &.o-icon-button-primary { 
+      background-color: darken( $color-1, 10% );
+    }
+  }
+}

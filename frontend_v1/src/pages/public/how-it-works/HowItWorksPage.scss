@@ -1,0 +1,93 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+body {
+  &.o-page--how-it-works {
+    background: $white;
+  }
+}
+
+.o-how-it-works {
+  padding-bottom: 1000px;
+
+  .o-how-it-works-page {
+    &.o-page {
+      background: transparent;
+      position: relative;
+      height: auto;
+      overflow-y: scroll;
+
+      @media (min-width: 768px) {
+        margin-left: 220px;
+      }
+
+      #how-it-works {
+        position: relative;;
+
+        #top {
+          position: absolute;
+          top:-130px;
+        }
+      }
+
+      .o-section {
+        margin-top:-100px;
+        padding-top: 130px;
+      }
+    }
+  }
+
+  // Scrollspy Nav for Medium devices and larger
+
+  .how-it-works-nav {
+    width: 200px;
+    float: left;
+    position: fixed;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    .list-group-item:first-child {
+      border-top-left-radius: $border-radius-normal;
+      border-top-right-radius: 0;
+    }
+
+    .list-group-item:last-child  {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: $border-radius-normal;
+    }
+
+    .list-group-item {
+      padding: $spacing-xs 0;
+      margin-bottom: -1px;
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      color: $text-color;
+
+      &:hover, &.active {
+        color: $link-color;
+      }
+    }
+  }
+
+  // Table of Contents for Mobile
+
+  .o-hiw-toc {
+
+    .o-toc-link {
+      margin: $spacing-sm 0;
+
+      a {
+        @include link-text;
+        padding: 2px 6px;
+        border-radius: 3px;
+
+        &:active, &:focus {
+          background-color: $gray-300;
+        }
+      }
+    }
+  }
+}

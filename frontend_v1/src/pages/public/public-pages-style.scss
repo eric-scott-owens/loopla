@@ -1,0 +1,30 @@
+@import "../../variables";
+@import "../../mixins";
+
+.o-public-page  {
+
+  .o-section {
+    padding-top: $spacing-section;
+    padding-bottom: $spacing-section;
+    border-bottom: 1px solid $gray-300;
+  }
+
+  .o-section-no-line {
+    padding-top: $spacing-section;
+    padding-bottom: $spacing-section;
+  }
+
+  .o-page-full-width-section {
+    padding-top: $spacing-section;
+    padding-bottom: $spacing-section;
+  }
+
+  img {
+    margin: $spacing-normal 0;
+  }
+}
+
+.o-back-to-top {
+  text-align: right;
+  margin: 10px 0;
+}

@@ -1,0 +1,11 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-photo-container {
+
+  .o-photo-caption {
+    @include body-text;
+    font-size: $font-size-tiny;
+    padding-top: 3px;
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+.o-user-account-settings {
+
+  // .o-user-avatar img {
+  //     border-radius: 50%;
+  //     height: 200px;
+  //     width: 200px;
+  // }
+
+    .btn-primary {
+      float: none;
+    }
+
+    .btn-secondary {
+      display: none;
+    }
+
+}

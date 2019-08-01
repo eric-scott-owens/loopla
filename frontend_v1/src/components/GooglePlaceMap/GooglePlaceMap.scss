@@ -1,0 +1,13 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-google-place-map-container {
+  height: 400px;
+
+  .o-google-place-map-loading {
+    height: 100%;
+  }
+  .o-google-place-map {
+    height: 100%;
+  }
+}

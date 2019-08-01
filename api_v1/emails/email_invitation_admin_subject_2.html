@@ -1,0 +1,4 @@
+{% spaceless %}
+<!-- Generates subject in email. If this string exceeds the character limit, it will be replaced with version 3 (invitation_admin_subject.3.html) or version 4 -->
+{{ user.first_name }} has invited you to be an organizer of {{ group.circle.name }}
+{% endspaceless %}

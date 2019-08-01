@@ -1,0 +1,66 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-page-full-width-section {
+  margin: 0 (-$page-spacing-x-xs);
+  position: relative;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    margin: 0 (-$page-spacing-x-sm);
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    margin: 0 (-$page-spacing-x-md);
+  }
+  
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    margin: 0 (-$page-spacing-x-lg);
+  }
+
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    margin: 0 (-$page-spacing-x-xl);
+  }
+
+  .o-page-full-width-section-content {
+    margin-left: $page-spacing-x-xs;
+    margin-right: $page-spacing-x-xs;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      margin-left: $page-spacing-x-sm;
+      margin-right: $page-spacing-x-sm;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      margin-left: $page-spacing-x-md;
+      margin-right: $page-spacing-x-md;
+    }
+    
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+      margin-left: $page-spacing-x-lg;
+      margin-right: $page-spacing-x-lg;
+    }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+      margin-left: $page-spacing-x-xl;
+      margin-right: $page-spacing-x-xl;
+    }
+  }
+
+  .o-page-full-width-section-content a {
+    @include body-text;
+    color: $text-color;
+
+    &:hover {
+      color: $link-color;
+    }
+  }
+
+}

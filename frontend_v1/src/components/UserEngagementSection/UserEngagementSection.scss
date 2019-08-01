@@ -1,0 +1,76 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-user-engagement-section {
+  position: relative;
+  padding: 12px 18px;
+  background-color: rgba($color-4, 0.5);
+  background-color: $color-4;
+  color: $text-color;
+  margin-bottom: 20px;
+  border-radius: 5px;
+
+  &.o-user-engagement-section-desktop {
+    display: block;
+  } 
+  &.o-user-engagement-section-mobile {
+    display: block;
+  }
+  &.o-user-engagement-not-visible {
+    display: none;
+  }
+  @media (max-width: 768px)
+  {
+    &.o-user-engagement-section-desktop {
+      display: none;
+    }
+  }
+  @media (min-width: 768px)
+  {
+    &.o-user-engagement-section-mobile {
+      display: none;
+    }
+  }
+
+  &.o-user-engagement-visible {
+    display: block;
+  }
+
+  .o-close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+
+  .o-user-engagement-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .o-user-engagement-topics {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: .5px;
+  }
+  
+  .o-user-engagement-dots {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .o-user-engagement-button {
+    padding: 12px 18px;
+    margin: 12px 0 0 0;
+    background-color: $white;
+    display: block;
+    text-align: center;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+}

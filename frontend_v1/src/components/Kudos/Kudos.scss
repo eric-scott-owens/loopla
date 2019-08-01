@@ -1,0 +1,45 @@
+@import "../../mixins";
+@import "../../variables";
+
+.o-kudos {
+  float: right;
+  position: relative;
+
+  .o-kudos-yes, .o-kudos-given, .o-kudos-button {
+
+  }
+
+  .o-kudos-yes {
+    color: $color-2;
+  }
+
+  .o-kudos-given {
+    color: $color-1;
+  }
+
+  .o-kudos-button {
+      color: $white;
+  }
+
+  svg {
+    font-size: 24px;
+  }
+
+  .o-icon-button {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+
+    svg {
+      font-size: 24px;
+      color: $gray-300;
+    }
+
+    &:hover {
+      svg {
+        color: $color-1;
+      }
+    }
+  }
+
+}

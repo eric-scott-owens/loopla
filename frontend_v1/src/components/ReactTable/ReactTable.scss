@@ -1,0 +1,58 @@
+@import "../../mixins";
+@import "../../variables";
+
+.ReactTable {
+
+  border: none;
+  @include body-text;
+
+  .o-date {
+    @include body-text;
+  }
+
+  a.o-user-display-name .o-person-name {
+    @include link-text;
+  }
+
+  .rt-thead.-header {
+    box-shadow: none;
+    // border-bottom: 1px solid $black;
+    margin-bottom: 12px;
+  }
+
+  .rt-thead .rt-th {
+    text-align: left;
+    border-right: none;
+  }
+
+  .rt-thead .rt-resizable-header:last-child {
+    @media (min-width: 576px) {
+      text-align: right;
+    }
+  }
+
+  .rt-tbody .rt-td:last-child {
+    @media (min-width: 576px) {
+      text-align: right;
+    }
+  }
+
+  .o-icon-button {
+    float: none;
+    
+    @media (min-width: 576px) {
+      float: right;
+    }
+  }
+
+  .rt-tbody .rt-td {
+    border-right: none;
+  }
+
+  .-pagination {
+    padding: 0 0 $spacing-normal 0;
+    box-shadow: none;
+    border-top: none;
+  }
+}
+

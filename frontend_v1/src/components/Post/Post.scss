@@ -1,0 +1,231 @@
+@import "../../mixins";
+@import "../../variables";
+
+
+.o-post {
+  white-space: pre-wrap;
+  word-break: break-word;
+
+  .o-editing-disabled {
+    opacity: .70;
+  }
+
+  .o-post-card {
+    visibility: visible;
+  }
+
+  h1 {
+    @include post-title-text;
+  }
+
+  p {
+    @include body-text;
+  }
+
+  .o-user-byline {
+
+    @media (max-width: 767px) {
+      // margin-bottom: $spacing-md;
+    }
+
+    .o-user-avatar {
+      
+    }
+
+    .o-user-display-name {
+      @include person-name-text;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    a.o-user-display-name {
+      @include person-name-link;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .o-loop-name a {
+      @include tiny-text;
+      transition: all 0.15s ease-in-out;
+    
+      &:hover {
+        color: $black;
+        text-decoration: none;
+        border-bottom: 1px solid $black;
+      }
+    }
+  }
+
+  .o-tag-list {
+    margin: 6px 0 0 -3px;
+  }
+
+  .o-post-view {
+    .o-user-byline-center {
+      .o-user-byline-center-B {
+        .o-date::before {
+          display: inline-block;
+          content: '';
+          -webkit-border-radius: 50%;
+          border-radius: 50%;
+          height: 2px;
+          width: 2px;
+          margin-right: 6px;
+          margin-left: 6px;
+          vertical-align: 2px;
+          background-color: $text-color;
+        }
+      }
+    }
+  }
+
+  .o-user-byline-right {
+    .o-icon-button {
+      margin-left: 6px;
+    }
+  }
+
+  .o-toolbar {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+    }
+
+    // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+    }
+
+    .o-toolbar-contents {
+      right: 0;
+    }
+
+    .o-kudos-icon {
+      fill: $gray-300; 
+      transition: $transition-normal;
+    }
+    .o-kudos-icon:hover {
+      fill: $color-5; 
+    }
+
+    .o-kudos-button-new {
+      // background: $gray-300;
+      // height: 20px;
+      // width: 20px;
+      // border-radius: 50%;
+      transition: $transition-normal;
+
+      .o-kudos-button-text {
+        display: none;
+      }
+
+      &:hover {
+        // background: $color-1;
+        width: ($page-spacing-x-xs - 5px);
+        // height: 50px;
+        border-radius: 0;
+
+        .o-kudos-button-text {
+          color: $white;
+          font-size: 11px;
+          letter-spacing: .3px;
+          font-weight: 500;
+          display: inline;
+          transition: $transition-normal;
+          transition-delay: 2s;
+          padding: 12px 2px;
+        }
+
+        // Small devices (landscape phones, 576px and up)
+        @media (min-width: 576px) {
+          width: ($page-spacing-x-sm - 5px);
+          height: 20px;
+
+          .o-kudos-button-text {
+            display: inline;
+          }
+        }
+
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) {
+          width: ($page-spacing-x-md -5px);
+
+          .o-kudos-button-text {
+            display: inline;
+          }
+        }
+
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) {
+          width: ($page-spacing-x-lg - 5px);
+
+          .o-kudos-button-text {
+            display: inline;
+          }
+        }
+
+        // Extra large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) {
+          width: ($page-spacing-x-xl - 5px);
+
+          .o-kudos-button-text {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+
+  .o-revision-history {
+    @include tiny-text;
+    display: inline-block;
+    vertical-align: -10px;
+  }
+
+  .o-place-area {
+    margin-top: $spacing-md;
+
+    .o-place {
+      margin-bottom: $spacing-md;
+    }
+  }
+
+  .post-tags-area {
+      padding: 0;
+  }
+
+  .o-component-button {
+    &.o-icon-button {
+      margin: 0 0 0 6px;
+      padding: 6px;
+    }
+  }
+
+  .o-comment-editor {
+    .o-tag-wrapper {
+      background-color: $gray-400;
+    }
+
+    .o-gallery {
+      margin: 0;
+    }
+  }
+
+  .o-mention-person {
+    color: darken( $link-color, 5% );
+    background-color: rgba( $color-1, .1);
+  }
+
+
+  // Kill the drop shadow on new post editing
+  &.o-post-is-new {
+    .o-post-editor.isActivelyEditing {
+      box-shadow: none;
+    }
+  }
+}

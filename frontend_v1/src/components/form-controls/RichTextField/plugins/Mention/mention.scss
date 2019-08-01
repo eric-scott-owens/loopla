@@ -1,0 +1,41 @@
+@import "../../../../../variables";
+@import "../../../../../mixins";
+
+.slate-editor-with-mentions {
+  position: relative;
+
+
+  .o-mention {
+    color: darken( $link-color, 5% );
+  }
+
+  .mention-context {
+    font-weight: bold;
+  }
+  
+  .mention-match-results {
+    position: absolute;
+    list-style: none;
+    z-index: 800;
+    padding: 0;
+    margin: 0;
+    
+    left: 0;
+    right: 0;
+
+    li {
+      text-align: left;
+      width: 100%;
+      display: block;
+
+      button {
+        text-align: left;
+        width: 100%;
+        background: white;
+        box-shadow: none;
+        border: none;
+        padding: 4px 10px;
+      }
+    }
+  }
+}

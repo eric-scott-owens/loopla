@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Loopla</title>
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="{{SITE_RESOURCES_URL}}frontend_v1/media/icons/Loopla-apple-touch-icon_57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{{SITE_RESOURCES_URL}}frontend_v1/media/icons/Loopla-apple-touch-icon_72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{{SITE_RESOURCES_URL}}frontend_v1/media/icons/Loopla-apple-touch-icon_114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="{{SITE_RESOURCES_URL}}frontend_v1/media/icons/Loopla-apple-touch-icon_144x144.png" />
+    <link rel="icon" type="image/png" href="{{SITE_RESOURCES_URL}}frontend_v1/media/icons/favicon.ico">
+
+    {% if DEPLOYMENT_ENVIRONMENT == 'PRODUCTION' %}
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KDZXX2P');</script>
+    <!-- End Google Tag Manager -->
+    {% endif %}
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+    {% if KUDOS_ENABLED %}
+    <script id="stripe-js" src="https://js.stripe.com/v3/" async></script>
+    {% endif %}
+  </head>
+  <script>
+    (function(){
+      window.Loopla = window.Loopla || {};
+      window.Loopla.config = window.Loopla.config || {};
+      
+      window.Loopla.config.SERVER_SITE_ASSETS_FROM_S3 = ('{{SERVER_SITE_ASSETS_FROM_S3}}' === 'True');
+      window.Loopla.config.SITE_RESOURCES_URL = '{{SITE_RESOURCES_URL}}';
+      window.Loopla.config.DEPLOYMENT_ENVIRONMENT = '{{DEPLOYMENT_ENVIRONMENT}}';
+      window.Loopla.config.RESTRICT_LOOP_CREATION = ('{{RESTRICT_LOOP_CREATION}}' === 'True');
+      window.Loopla.config.RESTRICT_LOOP_CREATION_ALLOWED_LOOPS = [{{RESTRICT_LOOP_CREATION_ALLOWED_LOOPS}}];
+      
+      window.Loopla.config.KUDOS_ENABLED = ("{{KUDOS_ENABLED}}" === 'True');
+      window.Loopla.config.KUDOS_STORE_ENABLED = ("{{KUDOS_ENABLED}}" === 'True');
+      
+      {% if KUDOS_ENABLED %}
+      window.Loopla.config.STRIPE_PUBLIC_KEY = '{{STRIPE_PUBLIC_KEY}}';
+      {% endif %}
+
+      window.Loopla.config.SOCKET_IO_SERVER_HOST = '{{SOCKET_IO_SERVER_HOST}}';
+      window.Loopla.config.SOCKET_IO_SERVER_PORT = '{{SOCKET_IO_SERVER_PORT}}';
+
+    })();
+  </script>
+
+  <body>
+    {% if DEPLOYMENT_ENVIRONMENT == 'PRODUCTION' %}
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=id"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    {% endif %}
+
+
+    <div id="app"></div>
+
+    {% load static %}
+    <script src="https://maps.googleapis.com/maps/api/js?key=key"></script>
+  </body>
+
+  {% if DEPLOYMENT_ENVIRONMENT == 'PRODUCTION' %}
+  <!-- Begin Inspectlet Asynchronous Code -->
+  <script type="text/javascript">
+    (function() {
+    window.__insp = window.__insp || [];
+    __insp.push(['wid', 431395274]);
+    var ldinsp = function(){
+    if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=431395274&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
+    setTimeout(ldinsp, 0);
+    })();
+  </script>
+  <!-- End Inspectlet Asynchronous Code -->
+  {% endif %}
+</html>

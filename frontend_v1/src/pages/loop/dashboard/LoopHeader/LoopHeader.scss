@@ -1,0 +1,163 @@
+@import "../../../../mixins";
+@import "../../../../variables";
+
+.o-loop-header {
+  position: fixed;
+  top: $loop-header-top-mobile;
+  left: 0;
+  width: 100%;
+  padding: 10px 15px 0px 15px;
+  background-color: rgba($white,0.95);
+  z-index: 900;
+  box-shadow: 0px 3px 35px -16px rgba(0,0,0,0.5);
+  transition: $transition-normal;
+  text-align: center;
+
+  // Medium and larger
+  @media (min-width: 768px) {
+    top: $loop-header-top;
+  }
+
+  .o-loop-header-large & {
+    // height: $loop-header-lg;
+  }
+
+  .o-loop-header-small & {
+    // height: $loop-header-sm;
+
+    .o-loop-collapse {
+      display: none;
+    }
+  }
+
+  .o-toolbar.o-toolbar-right .o-toolbar-contents,
+  .o-toolbar.o-responsive-page-container.o-toolbar-right .o-toolbar-contents {
+    right: 5px;
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      right: -42px;
+    }
+  }
+
+  .o-edit-loop-settings {
+    margin: 10px;
+
+    // Small devices and larger (768px and up)
+    @media (min-width: 576px) {
+      margin: 12px;
+    }
+  }
+
+  .ensure-space-for-loop-button {
+    .o-loop-dropdown {
+      .dropdown {
+        margin: 0 28px;
+
+        @media (min-width: 768px) {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .o-loop-collapse {
+
+    .o-responsive-page-container {
+      @media (max-width: 575px) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .o-loop-date-created {
+    text-transform: uppercase;
+  }
+
+  .o-loop-description {
+    @include body-text;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .o-loop-members {
+    margin: $spacing-md 0;
+
+    .o-member-list-plus {
+      float: none;
+      font-size: 12px;
+      display: inline-block;
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+      background-color: transparent;
+      vertical-align: 28px;
+      margin-left: 2px;
+
+      &:hover {
+        background-color: $gray-500;
+        color: $white;
+      }
+    }
+
+    .o-user-avatar .o-user-avatar-img {
+      @include user-avatar-sm;
+    }
+
+    .o-member-list {
+      margin: 6px 0;
+      
+      &.o-avatar-gallery {
+        .o-member {
+          display: inline-block;
+          text-align: center;
+  
+          a.o-user-display-name, 
+          .o-user-avatar {
+            display: block;
+            text-align: center;
+            min-width: 42px;
+            font-size: 11px;
+            color: $gray-600;
+          }
+        }
+      }
+    }
+  }
+}
+
+.o-member-modal {
+  .o-user-avatar .o-user-avatar-img {
+    height: $user-avatar-md;
+    width: $user-avatar-md;
+  }
+
+  .o-member-organizer-totals {
+    text-align: center;
+    @include subtitle-text;
+  } 
+
+  .o-member-list {
+    .o-member {
+      margin-bottom: $spacing-md;
+
+      .o-user-display-name {
+        margin-left: $spacing-md;
+        @include person-name-text;
+        vertical-align: 15px;
+      }
+
+      a.o-user-display-name {
+        @include person-name-link;
+      }
+    }
+    
+    .o-organizer-label {
+      vertical-align: 15px;
+      margin-left: 10px;
+      letter-spacing: .5px;
+      color: $gray-600;
+    }
+  }
+}

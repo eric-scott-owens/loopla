@@ -1,0 +1,673 @@
+ch{% extends "dashboard/base_logged_out.html" %}
+
+{% block content %}
+{% load widget_tweaks %}
+{% load static %}
+
+<div class="container-fluid outer-container o-background-gradient-2">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+    <!-- For smaller card use:
+    <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1"> -->
+      <div class="card">
+        <div class="card-content">
+          <div class="card-header">
+            <div class="card-img">
+              <!--img src="https://intheknomediafiles001.s3.amazonaws.com/media/site_photos/3Monsters_150x232.png" alt="monster" height="150" width="232" data-pin-nopin="true"-->
+              <img src="{{MEDIA_URL}}site_photos/3Monsters_150x232.png" alt="monster" height="150" width="232" data-pin-nopin="true">
+            </div> <!-- End card-img -->
+            <div class="card-title">
+              Careers at Loopla
+            </div> <!-- End card-title -->
+            <h6 class="text-center">
+              <a href="#careersSEI">Software Engineering Intern</a>
+              <br><a href="#careersURI">User Researcher / User Experience Intern</a>
+              <br><a href="#careersUII">User Interface / Visual Design Intern</a>
+              <br>
+              <br><a href="#careersOTHER">Other Roles</a>
+              <!--a href="#careersSEL">Software Engineering Lead</a>
+              <br><a href="#careersSE">Software Engineer</a>
+              <br><a href="#careersUR">User Researcher</a>
+              <br><a href="#careersAA">Operations Assistant</a-->
+            </h6>
+          </div> <!-- End card-header -->
+
+          <!-- **************************************************** -->
+
+          <div class="card-body background-gray links-blue margin-top-30">
+
+            <h3>About Loopla</h3>
+
+            <p>Loopla is a way for people to solve life together. Loops are the foundation of Loopla. A loop is a closed, private group of friends who share questions and information about everyday life.</p>
+
+            <p>Loops may discuss anything of interest to their members. Topics may include anything from finding a talented hair stylist or a reliable auto repair shop, recommending a good place for viewing 4th of July fireworks, planning a camping trip to giving away clothes that no longer fit our children.</p>
+
+            <p>Loopla is designed to be the <b>helpful social network</b> where friends assist each other in small ways. Loopla seeks to create a healthy online environment that brings out the best in people, building deeper relationships and stronger communities.</p>
+
+            <p>Loopla is based on user privacy, and is not an advertising platform. We will not show you ads and we will not sell or share your data with third parties. Loopla is free and seeks to be sustainable through donations from our users.</p>
+
+            <h3>Working at Loopla</h3>
+            <p>Loopla, a Pittsburgh-based startup company founded by <a href="https://www.linkedin.com/in/henry-schneiderman-1345498/">Henry Schneiderman</a> and <a href="https://www.linkedin.com/in/annelopezz/">Anne Lopez</a>, is seeking candidates to join our small and passionate team. We encourage open discussion, experimentation and kindness within a casual work environment. Team members have a great deal of autonomy and the opportunity to contribute to many aspects of the business.</p>
+
+            <p>As a part of the Loopla team, you’ll be working to build technology that strengthens groups through meaningful interactions while delivering delightful user experiences.</p>
+
+            <b>Technology</b>
+            <p>Our current technology stack includes React, Python, Django (backend only), Postgresql, HTML, CSS, Bootstrap, Javascript, and jQuery as well as Heroku and AWS.</p>
+
+            <b>Office</b>
+            <p>We are located in the heart of the <!--a href="https://www.google.com/maps/d/u/1/edit?mid=1Bx038D4BSl3dn7F9d7yhmZuWTY8TnwgQ&ll=40.46049891721538%2C-79.92340924999996&z=16"-->East Liberty neighborhood<!--/a-->, in close proximity to other startup companies and within walking distance of Google, Duolingo, AlphaLab and AlphaLab Gear and surrounded by a variety of restaurants, coffee shops and a vibrant nightlife. East Liberty is a diverse neighborhood, offering many housing options, including single family homes, condos, and apartments. A number of other very livable neighborhoods are within walking distance or a short bike ride, including Shadyside, Squirrel Hill, Bloomfield, Highland Park, and Garfield.</p>
+
+            <p><b>Benefits for full-time employees</b>
+              <ul>
+                <li>Market-rate salaries</li>
+                <li>Excellent benefits</li>
+                <li>Opportunity to influence product and company from the ground up</li>
+                <li>Equity</li>
+                <li>Paid time off</li>
+                <li>Medical, dental and vision insurance</li>
+              </ul>
+            </p>
+
+            <div class="bottom-line"></div>
+
+            <br><b>Loopla is an equal opportunity employer. We are committed to building an inclusive environment for all employees.</b>
+
+            <br><br>Recruiters, please do not contact us.
+
+          </div>
+
+          <!-- **************************************************** -->
+
+          <div class="card-body links-blue">
+
+              <div class="margin-bottom-30" id="careersSEI"></div>
+              <h2>Software Engineering Intern</h2>
+              <p>Loopla is looking for interns to work as part of our team for the summer of 2019. Interns will have the opportunity to work on a variety of features involving front-end, back-end, and/or full-stack development. Interns will work with Loopla’s team which includes expertise in software engineering, design, and user research and will enjoy broad exposure to many aspects of company operations. The internship will be a great opportunity to contribute to a new and exciting social platform while learning many new things in a supportive work environment.</p>
+  
+              <b>What we are looking for:</b>
+              <br>Candidates majoring in computer science or a related field with strong desire to learn new skills and build a great product that delights users.
+              <br>
+  
+              <a class="btn btn-sm btn-round btn-primary" href="https://goo.gl/forms/6T5cfOU3v7PmTgSi2" target="_blank">Apply Here</a>
+  
+
+              <div class="margin-bottom-30" id="careersURI"></div>
+              <h2>User Researcher / User Experience Intern</h2>
+              <p>Loopla is looking for interns to work as part of our team for the summer of 2019. Interns will engage in various aspects of user research including user outreach, user experience design, and user testing. Interns will work with Loopla’s team which includes expertise in user research, design, and software engineering and will enjoy broad exposure to many aspects of company operations. The internship will be a great opportunity to contribute to a new and exciting social platform while learning many new things in a supportive work environment.</p>
+  
+              <b>What we are looking for:</b>
+              <br>Candidates majoring in human-computer interaction, computer science, psychology or a related field with strong desire to learn new skills and build a great product that delights users.
+              <br>
+  
+              <a class="btn btn-sm btn-round btn-primary" href="https://goo.gl/forms/6T5cfOU3v7PmTgSi2" target="_blank">Apply Here</a>
+  
+
+              <div class="margin-bottom-30" id="careersUII"></div>
+              <h2>User Interface / Visual Design Intern</h2>
+              <p>Loopla is looking for interns to work as part of our team for the summer of 2019. Interns will engage in various aspects of user experience design including interaction design and visual design. Interns will work with Loopla’s team which includes expertise in design, user research, and software engineering and will enjoy broad exposure to many aspects of company operations.  The internship will be a great opportunity to contribute to a new and exciting social platform while learning many new things in a supportive work environment.
+                </p>
+  
+              <b>What we are looking for:</b>
+              <br>Candidates with a background in human-computer interaction and visual design with strong desire to learn new skills and build a great product that delights users.
+              <br>
+
+              <a class="btn btn-sm btn-round btn-primary" href="https://goo.gl/forms/6T5cfOU3v7PmTgSi2" target="_blank">Apply Here</a>
+  
+              <div class="margin-bottom-30" id="careersOTHER"></div>
+              <h2>Other Roles</h2>
+              <p>Don't see what you are looking for? We are always on the lookout for people who are inspired by Loopla’s mission and who can contribute in unique and impactful ways. Send us your resume with a cover letter elaborating on why you would like to work at Loopla.</p>
+  
+
+              <a class="btn btn-sm btn-round btn-primary" href="https://goo.gl/forms/JTxoivBXaOVRnoPH3" target="_blank">Apply Here</a>
+              
+  
+              <!-- **************************************************** -->
+
+              <!-- ***** Non-active job listings   ******************** -->
+              <!--  
+            <div class="margin-bottom-30" id="careersSEL"></div>
+            <h2>Software Engineering Lead</h2>
+            <p>You are an experienced software engineer motivated by Loopla’s mission and passionate about creating a product that will delight users. You will lead a small team of software developers and work with co-founders who are startup veterans with expertise in user experience, design, and engineering. As the Software Engineering Lead, you will help define the technical direction of the product and will have broad involvement with many aspects of product development.</p>
+
+            <b>Goals</b>
+            <br>As a company, we strive to build a technology that is intuitive, flexible, scalable, and consistent across platforms. As a member of our engineering team, you will work toward the following goals:
+            <ul>
+              <li>Create a product that users intuitively grasp</li>
+              <li>Develop software that is maintainable and adaptable to changes in design</li>
+              <li>Develop consistency in look, feel, and behavior across common devices and platforms</li>
+              <li>Develop a platform that can smoothly accommodate rapid growth in usage and content</li>
+            </ul>
+
+            <b>Skills Required</b>
+            <ul>
+              <li>Experience building successful production software systems</li>
+              <li>Deeply knowledgeable about the web and mobile software ecosystem</li>
+              <li>Experience with a variety of modern programming languages (e.g., Java, Python, Javascript, C++)</li>
+              <li>Ability to motivate the software team to build and improve our product and desire to mentor junior members of the team</li>
+              <li>Good judgment in allocating time and resources. Understanding when to move quickly, for example, to test experimental ideas, and when to devote greater effort to engineer stable components of the product</li>
+              <li>Initiative to learn and apply new concepts and new technologies</li>
+              <li>Ability to synthesize many priorities and points of view</li>
+              <li>Clear, direct, yet polite written and verbal communication skills. Back up opinions and arguments with specific data or relevant information and concepts. Be open-minded and examine other points of view.</li>
+            </ul>
+
+            <b>Expectations</b>
+            <ul>
+              <li>Experienced with or excited to learn React & Redux, natural language technologies, Javascript, database design & Postgresql</li>
+              <li>Treat others with respect and kindness</li>
+              <li>Willingness to learn and grow both professionally and personally</li>
+              <li>Local to Pittsburgh area or willingness to relocate</li>
+            </ul>
+
+            <a class="btn btn-sm btn-round btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeE0tHni-ln9aUoDUuQvlHJa6ca93CnxopSkpM8_th1LuDRRg/viewform?usp=sf_link" target="_blank">Apply Here</a>
+
+
+
+
+            <div class="bottom-line margin-top-30 margin-bottom-30" id="careersSE"></div>
+            <h2>Software Engineer</h2>
+
+            <p>You are a versatile software developer who is motivated by Loopla’s mission and passionate about creating a product that will delight users. You’ll work with a small dynamic team with expertise in user experience, design and engineering. You will have broad involvement with many aspects of product development.</p>
+
+            <b>Goals</b>
+            <br>As a company, we strive to build a technology that is intuitive, flexible, scalable, and consistent across platforms. As a member of our engineering team, you will work toward the following goals:
+            <ul>
+              <li>Create a product that users intuitively grasp</li>
+              <li>Develop software that is maintainable and adaptable to changes in design</li>
+              <li>Develop consistency in look, feel, and behavior across common devices and platforms</li>
+              <li>Develop a platform that can smoothly accommodate rapid growth in usage and content</li>
+            </ul>
+
+            <b>Skills Required</b>
+            <ul>
+              <li>A solid foundation in computer science with strong competencies in data structures, algorithms, and software design</li>
+              <li>Experience with a modern programming language (e.g., Java, Python, Javascript, C++)</li>
+              <li>Good judgment in allocating time and resources. Understanding when to move quickly, for example, to test experimental ideas, and when to devote greater effort to engineer stable components of the product</li>
+              <li>Initiative to learn and apply new concepts and new technologies</li>
+              <li>Clear, direct, yet polite written and verbal communication skills. Back up opinions and arguments with specific data or relevant information and concepts. Be open-minded and examine other points of view</li>
+            </ul>
+
+            <b>Expectations</b>
+            <ul>
+              <li>Experienced with or excited to learn React & Redux, natural language technologies, Javascript, database design & Postgresql</li>
+              <li>Treat others with respect and kindness</li>
+              <li>Willingness to learn and grow both professionally and personally</li>
+              <li>Local to Pittsburgh area or willingness to relocate</li>
+            </ul>
+
+            <a class="btn btn-sm btn-round btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeE0tHni-ln9aUoDUuQvlHJa6ca93CnxopSkpM8_th1LuDRRg/viewform?usp=sf_link" target="_blank">Apply Here</a>
+       
+
+            <div class="bottom-line margin-top-30 margin-bottom-30" id="careersUR"></div>
+            <h2>User Researcher</h2>
+            <p>You are an empathetic user advocate motivated by Loopla’s mission and passionate about creating a product that will delight users. You have a background in user experience, user interface, social and cognitive psychology and a desire to learn more in these areas.</p>
+
+            <p>You will use a variety methods to develop user and group personas and study the characteristics of these target audiences. You will collaborate with the rest of the team to design a product that best satisfies user needs.</p>
+
+            <p><i>This position does not require design (visual, interaction, or otherwise) or programming.</i></p>
+
+            <b>Your Responsibilities</b>
+            <ul>
+              <li>Engage with potential groups of users, such as co-workers, athletic groups, parents, social groups, support groups, etc.</li>
+              <li>Research user and group needs and goals utilizing various methods, such as user interviews, surveys, observation, and outside research</li>
+              <li>Coordinate user and usability studies</li>
+              <li>Identify user pain points in using our existing product</li>
+              <li>Create user and group personas; identifying needs, attitudes, aspirations, expectations, obstacles and motivations</li>
+              <li>Collaborate with team members to create storyboards, mockups, prototypes, and/or wireframes to communicate design ideas</li>
+              <li>Summarize and prioritize research findings</li>
+              <li>Glean actionable insights valuable to product development</li>
+              <li>Collaborate with the team to design a product that best meets user needs as identified through research and testing</li>
+            </ul>
+
+            <b>Expectations</b>
+            <ul>
+              <li>Familiarity with a variety of research methods, such as interviews, personas, card sorting, surveys, and usability studies</li>
+              <li>Treat others with respect and kindness</li>
+              <li>Willingness to learn and grow both professionally and personally</li>
+              <li>Local to Pittsburgh area or willingness to relocate</li>
+            </ul>
+
+            <a class="btn btn-sm btn-round btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSeE0tHni-ln9aUoDUuQvlHJa6ca93CnxopSkpM8_th1LuDRRg/viewform?usp=sf_link" target="_blank">Apply Here</a>
+
+        
+
+            <div class="bottom-line margin-top-30 margin-bottom-30" id="careersAA"></div>
+            <h2>Operations Assistant</h2>
+            <p>You are a reliable team player who loves helping others, streamlining processes, getting the details right and taking initiative to improve your organization. You enjoy working independently, managing multiple projects at the same time, have excellent written and verbal communication skills and are proficient with technology and enjoy learning to use new online tools.</p>
+
+            <p></p><i>This is a part-time position requiring 10 to 20 hours per week.</i></p>
+
+            <b>Your Responsibilities</b>
+            <ul>
+              <li>Work closely with the management team to help organize and coordinate business operations (HR, finance, accounting, facilities)</li>
+              <li>Screen calls, manage calendars and coordinate meetings and events</li>
+              <li>Arrange travel plans including airfare, car rental, hotel accommodations, etc.</li>
+              <li>Prepare expense reimbursements</li>
+              <li>Regularly complete bookkeeping tasks, including tracking and coding expenses, and creating reports in Quickbooks</li>
+              <li>Manage invoices and payments</li>
+              <li>Edit and proofread memos, emails, presentations and reports</li>
+              <li>Assist in the coordination of the benefits program, payroll and recruitment efforts</li>
+              <li>Organize and track contracts</li>
+              <li>Research various topics and write summary memos</li>
+              <li>Run errands when necessary</li>
+              <li>Make calls, send emails, complete forms and whatever else it takes to get things done</li>
+              <li>Order equipment and supplies</li>
+              <li>Maintain orderly office and work areas</li>
+            </ul>
+
+            <b>Expectations</b>
+            <ul>
+                <li>Familiarity with a variety of online tools, including Google Docs, Google Sheets, Google Forms, Google Calendar, Trello, Video Conferencing</li>
+                <li>Required to sign a confidentiality agreement and can be trusted to keep information completely confidential</li>
+                <li>Ability to exercise tact, courtesy, and judgement in working with others</li>
+                <li>Treat others with respect and kindness</li>
+                <li>Willingness to learn and grow both professionally and personally</li>
+                <li>Availability outside normal business hours to complete tasks when necessary</li>
+                <li>Possess a valid driver’s license</li>
+                <li>Local to Pittsburgh area</li>
+              </ul>
+
+            <a class="btn btn-sm btn-round btn-primary margin-bottom-30" href="https://docs.google.com/forms/d/e/1FAIpQLSeE0tHni-ln9aUoDUuQvlHJa6ca93CnxopSkpM8_th1LuDRRg/viewform?usp=sf_link" target="_blank">Apply Here</a>
+
+
+            -->
+          </div> <!-- End card-body -->
+        </div> <!-- End card-content -->
+      </div> <!-- End card -->
+    </div> <!-- End col -->
+  </div> <!-- End row -->
+</div> <!-- End container-fluid -->
+
+<script type="application/ld+json"> {
+  "@context" : "http://schema.org/",
+  "@type" : "JobPosting",
+  "title" : "Software Engineering Intern",
+  "description" : "
+  <p>Loopla is looking for interns to work as part of our team for the summer of 2019. Interns will have the opportunity to work on a variety of features involving front-end, back-end, and/or full-stack development. Interns will work with Loopla’s team which includes expertise in software engineering, design, and user research and will enjoy broad exposure to many aspects of company operations. The internship will be a great opportunity to contribute to a new and exciting social platform while learning many new things in a supportive work environment.</p>
+  
+  <b>What we are looking for:</b>
+  <br>Candidates majoring in computer science or a related field with strong desire to learn new skills and build a great product that delights users.
+  ,
+
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Loopla",
+    "value": "SEI_1_2018"
+  },
+  "datePosted" : "2018-10-11",
+  "validThrough" : "2019-03-01T00:00",
+  "employmentType" : "INTERNSHIP",
+  "hiringOrganization" : {
+    "@type" : "Organization",
+    "name" : "Loopla",
+    "sameAs" : "http://www.loopla.com",
+    "logo": "https://www.loopla.com/logo"
+  },
+  "jobLocation" : {
+    "@type" : "Place",
+    "address" : {
+      "@type" : "PostalAddress",
+      "addressLocality" : "Pittsburgh",
+      "addressRegion" : "PA",
+      "postalCode" : "15206",
+      "addressCountry": "US"
+    }
+  }
+}
+</script>
+
+
+<script type="application/ld+json"> {
+  "@context" : "http://schema.org/",
+  "@type" : "JobPosting",
+  "title" : "User Researcher / User Experience Intern",
+  "description" : "
+  <p>Loopla is looking for interns to work as part of our team for the summer of 2019. Interns will engage in various aspects of user research including user outreach, user experience design, and user testing. Interns will work with Loopla’s team which includes expertise in user research, design, and software engineering and will enjoy broad exposure to many aspects of company operations. The internship will be a great opportunity to contribute to a new and exciting social platform while learning many new things in a supportive work environment.</p>
+  
+  <b>What we are looking for:</b>
+  <br>Candidates majoring in human-computer interaction, computer science, psychology or a related field with strong desire to learn new skills and build a great product that delights users.
+  ,
+
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Loopla",
+    "value": "URI_1_2018"
+  },
+  "datePosted" : "2018-10-11",
+  "validThrough" : "2019-03-01T00:00",
+  "employmentType" : "INTERNSHIP",
+  "hiringOrganization" : {
+    "@type" : "Organization",
+    "name" : "Loopla",
+    "sameAs" : "http://www.loopla.com",
+    "logo": "https://www.loopla.com/logo"
+  },
+  "jobLocation" : {
+    "@type" : "Place",
+    "address" : {
+      "@type" : "PostalAddress",
+      "addressLocality" : "Pittsburgh",
+      "addressRegion" : "PA",
+      "postalCode" : "15206",
+      "addressCountry": "US"
+    }
+  }
+}
+</script>
+
+
+<script type="application/ld+json"> {
+  "@context" : "http://schema.org/",
+  "@type" : "JobPosting",
+  "title" : "User Interface / Visual Design Intern",
+  "description" : "
+  <p>Loopla is looking for interns to work as part of our team for the summer of 2019. Interns will engage in various aspects of user experience design including interaction design and visual design. Interns will work with Loopla’s team which includes expertise in design, user research, and software engineering and will enjoy broad exposure to many aspects of company operations.  The internship will be a great opportunity to contribute to a new and exciting social platform while learning many new things in a supportive work environment.
+    </p>
+  <b>What we are looking for:</b>
+  <br>Candidates with a background in human-computer interaction and visual design with strong desire to learn new skills and build a great product that delights users.
+  ,
+
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Loopla",
+    "value": "UII_1_2018"
+  },
+  "datePosted" : "2018-10-11",
+  "validThrough" : "2019-03-01T00:00",
+  "employmentType" : "INTERNSHIP",
+  "hiringOrganization" : {
+    "@type" : "Organization",
+    "name" : "Loopla",
+    "sameAs" : "http://www.loopla.com",
+    "logo": "https://www.loopla.com/logo"
+  },
+  "jobLocation" : {
+    "@type" : "Place",
+    "address" : {
+      "@type" : "PostalAddress",
+      "addressLocality" : "Pittsburgh",
+      "addressRegion" : "PA",
+      "postalCode" : "15206",
+      "addressCountry": "US"
+    }
+  }
+}
+</script>
+<!--script type="application/ld+json"> {
+  "@context" : "http://schema.org/",
+  "@type" : "JobPosting",
+  "title" : "Software Engineering Lead",
+  "description" : "
+    <p>You are an experienced software engineer motivated by Loopla’s mission and passionate about creating a product that will delight users. You will lead a small team of software developers and work with co-founders who are startup veterans with expertise in user experience, design, and engineering. As the Software Engineering Lead, you will help define the technical direction of the product and will have broad involvement with many aspects of product development.</p>
+
+    <br><b>Goals</b>
+    As a company, we strive to build a technology that is intuitive, flexible, scalable, and consistent across platforms. As a member of our engineering team, you will work toward the following goals:
+    <ul>
+      <li>Create a product that users intuitively grasp</li>
+      <li>Develop software that is maintainable and adaptable to changes in design</li>
+      <li>Develop consistency in look, feel, and behavior across common devices and platforms</li>
+      <li>Develop a platform that can smoothly accommodate rapid growth in usage and content</li>
+    </ul>
+
+    <b>Skills Required</b>
+    <ul>
+      <li>Experience building successful production software systems</li>
+      <li>Deeply knowledgeable about the web and mobile software ecosystem</li>
+      <li>Experience with a variety of modern programming languages (e.g., Java, Python, Javascript, C++)</li>
+      <li>Ability to motivate the software team to build and improve our product and desire to mentor junior members of the team</li>
+      <li>Good judgment in allocating time and resources. Understanding when to move quickly, for example, to test experimental ideas, and when to devote greater effort to engineer stable components of the product</li>
+      <li>Initiative to learn and apply new concepts and new technologies</li>
+      <li>Ability to synthesize many priorities and points of view</li>
+      <li>Clear, direct, yet polite written and verbal communication skills. Back up opinions and arguments with specific data or relevant information and concepts. Be open-minded and examine other points of view.</li>
+    </ul>
+
+    <b>Expectations</b>
+    <ul>
+      <li>Experienced with or excited to learn React & Redux, natural language technologies, Javascript, database design & Postgresql</li>
+      <li>Treat others with respect and kindness</li>
+      <li>Willingness to learn and grow both professionally and personally</li>
+      <li>Local to Pittsburgh area or willingness to relocate</li>
+    </ul>
+
+    <b>Benefits for full-time employees</b>
+    <ul>
+      <li>Market-rate salaries</li>
+      <li>Excellent benefits</li>
+      <li>Opportunity to influence product and company from the ground up</li>
+      <li>Equity</li>
+      <li>Paid time off</li>
+      <li>Medical, dental and vision insurance</li>
+    </ul>",
+
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Loopla",
+    "value": "SEL_1_2018"
+  },
+  "datePosted" : "2018-06-25",
+  "validThrough" : "2018-09-01T00:00",
+  "employmentType" : "FULL_TIME",
+  "hiringOrganization" : {
+    "@type" : "Organization",
+    "name" : "Loopla",
+    "sameAs" : "http://www.loopla.com",
+    "logo": "https://www.loopla.com/logo"
+  },
+  "jobLocation" : {
+    "@type" : "Place",
+    "address" : {
+      "@type" : "PostalAddress",
+      "addressLocality" : "Pittsburgh",
+      "addressRegion" : "PA",
+      "postalCode" : "15206",
+      "addressCountry": "US"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json"> {
+  "@context" : "http://schema.org/",
+  "@type" : "JobPosting",
+  "title" : "Software Engineer",
+  "description" : "
+    <p>You are a versatile software developer who is motivated by Loopla’s mission and passionate about creating a product that will delight users. You’ll work with a small dynamic team with expertise in user experience, design and engineering. You will have broad involvement with many aspects of product development.</p>
+
+    <br><b>Goals</b>
+    As a company, we strive to build a technology that is intuitive, flexible, scalable, and consistent across platforms. As a member of our engineering team, you will work toward the following goals:
+    <ul>
+      <li>Create a product that users intuitively grasp</li>
+      <li>Develop software that is maintainable and adaptable to changes in design</li>
+      <li>Develop consistency in look, feel, and behavior across common devices and platforms</li>
+      <li>Develop a platform that can smoothly accommodate rapid growth in usage and content</li>
+    </ul>
+
+    <b>Skills Required</b>
+    <ul>
+      <li>A solid foundation in computer science with strong competencies in data structures, algorithms, and software design</li>
+      <li>Experience with a modern programming language (e.g., Java, Python, Javascript, C++)</li>
+      <li>Good judgment in allocating time and resources. Understanding when to move quickly, for example, to test experimental ideas, and when to devote greater effort to engineer stable components of the product</li>
+      <li>Initiative to learn and apply new concepts and new technologies</li>
+      <li>Clear, direct, yet polite written and verbal communication skills. Back up opinions and arguments with specific data or relevant information and concepts. Be open-minded and examine other points of view.</li>
+    </ul>
+
+    <b>Expectations</b>
+    <ul>
+      <li>Experienced with or excited to learn React & Redux, natural language technologies, Javascript, database design & Postgresql</li>
+      <li>Treat others with respect and kindness</li>
+      <li>Willingness to learn and grow both professionally and personally</li>
+      <li>Local to Pittsburgh area or willingness to relocate</li>
+    </ul>
+
+    <b>Benefits for full-time employees</b>
+    <ul>
+      <li>Market-rate salaries</li>
+      <li>Excellent benefits</li>
+      <li>Opportunity to influence product and company from the ground up</li>
+      <li>Equity</li>
+      <li>Paid time off</li>
+      <li>Medical, dental and vision insurance</li>
+    </ul>",
+
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Loopla",
+    "value": "SE_1_2018"
+  },
+  "datePosted" : "2018-06-25",
+  "validThrough" : "2018-09-01T00:00",
+  "employmentType" : "FULL_TIME",
+  "hiringOrganization" : {
+    "@type" : "Organization",
+    "name" : "Loopla",
+    "sameAs" : "http://www.loopla.com",
+    "logo": "https://www.loopla.com/logo"
+  },
+  "jobLocation" : {
+    "@type" : "Place",
+    "address" : {
+      "@type" : "PostalAddress",
+      "addressLocality" : "Pittsburgh",
+      "addressRegion" : "PA",
+      "postalCode" : "15206",
+      "addressCountry": "US"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json"> {
+  "@context" : "http://schema.org/",
+  "@type" : "JobPosting",
+  "title" : "User Researcher",
+  "description" : "
+    <p>You are an empathetic user advocate motivated by Loopla’s mission and passionate about creating a product that will delight users. You have a background in user experience, user interface, social and cognitive psychology and a desire to learn more in these areas.</p>
+
+    <p>You will use a variety methods to develop user and group personas and study the characteristics of these target audiences. You will collaborate with the rest of the team to design a product that best satisfies user needs.</p>
+
+    <p><i>This position does not require design (visual, interaction, or otherwise) or programming.</i></p>
+
+    <br><b>Your Responsibilities</b>
+    <ul>
+      <li>Engage with potential groups of users, such as co-workers, athletic groups, parents, social groups, support groups, etc.</li>
+      <li>Research user and group needs and goals utilizing various methods, such as user interviews, surveys, observation, and outside research</li>
+      <li>Coordinate user and usability studies</li>
+      <li>Identify user pain points in using our existing product</li>
+      <li>Create user and group personas; identifying needs, attitudes, aspirations, expectations, obstacles and motivations</li>
+      <li>Collaborate with team members to create storyboards, mockups, prototypes, and/or wireframes to communicate design ideas</li>
+      <li>Summarize and prioritize research findings</li>
+      <li>Glean actionable insights valuable to product development</li>
+      <li>Collaborate with the team to design a product that best meets user needs as identified through research and testing</li>
+    </ul>
+
+    <b>Expectations</b>
+    <ul>
+      <li>Familiarity with a variety of research methods, such as interviews, personas, card sorting, surveys, and usability studies</li>
+      <li>Treat others with respect and kindness</li>
+      <li>Willingness to learn and grow both professionally and personally</li>
+      <li>Local to Pittsburgh area or willingness to relocate</li>
+    </ul>
+
+    <b>Benefits for full-time employees</b>
+    <ul>
+      <li>Market-rate salaries</li>
+      <li>Excellent benefits</li>
+      <li>Opportunity to influence product and company from the ground up</li>
+      <li>Equity</li>
+      <li>Paid time off</li>
+      <li>Medical, dental and vision insurance</li>
+    </ul>",
+
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Loopla",
+    "value": "UR_1_2018"
+  },
+  "datePosted" : "2018-06-25",
+  "validThrough" : "2018-09-01T00:00",
+  "employmentType" : "FULL_TIME",
+  "hiringOrganization" : {
+    "@type" : "Organization",
+    "name" : "Loopla",
+    "sameAs" : "http://www.loopla.com",
+    "logo": "https://www.loopla.com/logo"
+  },
+  "jobLocation" : {
+    "@type" : "Place",
+    "address" : {
+      "@type" : "PostalAddress",
+      "addressLocality" : "Pittsburgh",
+      "addressRegion" : "PA",
+      "postalCode" : "15206",
+      "addressCountry": "US"
+    }
+  }
+}
+</script>
+
+<script type="application/ld+json"> {
+  "@context" : "http://schema.org/",
+  "@type" : "JobPosting",
+  "title" : "Operations Assistant",
+  "description" : "
+    <p>You are a reliable team player who loves helping others, streamlining processes, getting the details right and taking initiative to improve your organization. You enjoy working independently, managing multiple projects at the same time, have excellent written and verbal communication skills and are proficient with technology and enjoy learning to use new online tools.</p>
+
+    <p></p><i>This is a part-time position requiring 10 to 20 hours per week.</i></p>
+
+    <br><b>Your Responsibilities</b>
+    <ul>
+      <li>Work closely with the management team to help organize and coordinate business operations (HR, finance, accounting, facilities)</li>
+      <li>Screen calls, manage calendars and coordinate meetings and events</li>
+      <li>Arrange travel plans including airfare, car rental, hotel accommodations, etc.</li>
+      <li>Prepare expense reimbursements</li>
+      <li>Regularly complete bookkeeping tasks, including tracking and coding expenses, and creating reports in Quickbooks</li>
+      <li>Manage invoices and payments</li>
+      <li>Edit and proofread memos, emails, presentations and reports</li>
+      <li>Assist in the coordination of the benefits program, payroll and recruitment efforts</li>
+      <li>Organize and track contracts</li>
+      <li>Research various topics and write summary memos</li>
+      <li>Run errands when necessary</li>
+      <li>Make calls, send emails, complete forms and whatever else it takes to get things done</li>
+      <li>Order equipment and supplies</li>
+      <li>Maintain orderly office and work areas</li>
+    </ul>
+
+    <b>Expectations</b>
+    <ul>
+      <li>Familiarity with a variety of online tools, including Google Docs, Google Sheets, Google Forms, Google Calendar, Trello, Video Conferencing</li>
+      <li>Required to sign a confidentiality agreement and can be trusted to keep information completely confidential</li>
+      <li>Ability to exercise tact, courtesy, and judgement in working with others</li>
+      <li>Treat others with respect and kindness</li>
+      <li>Willingness to learn and grow both professionally and personally</li>
+      <li>Availability outside normal business hours to complete tasks when necessary</li>
+      <li>Possess a valid driver’s license</li>
+      <li>Local to Pittsburgh area</li>
+    </ul>",
+
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "Loopla",
+    "value": "OA_1_2018"
+  },
+  "datePosted" : "2018-06-25",
+  "validThrough" : "2018-09-01T00:00",
+  "employmentType" : "PART_TIME",
+  "hiringOrganization" : {
+    "@type" : "Organization",
+    "name" : "Loopla",
+    "sameAs" : "http://www.loopla.com",
+    "logo": "https://www.loopla.com/logo"
+  },
+  "jobLocation" : {
+    "@type" : "Place",
+    "address" : {
+      "@type" : "PostalAddress",
+      "addressLocality" : "Pittsburgh",
+      "addressRegion" : "PA",
+      "postalCode" : "15206",
+      "addressCountry": "US"
+    }
+  }
+}
+</script-->
+
+{% endblock content %}

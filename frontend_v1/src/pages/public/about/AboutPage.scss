@@ -1,0 +1,15 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+body {
+  &.o-page--about {
+    background: $gradient-1;
+  }
+}
+
+.o-about-page {
+
+  &.o-page {
+    overflow: auto;
+  }
+}

@@ -1,0 +1,49 @@
+@import "./pages/responsive-page-container";
+
+.o-tour-hacks {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: $navbar-height;
+
+  // navbar height + loop header lg height + masonry spacing
+  .o-loop-header-large & {
+    top: ( $loop-header-top + $loop-header-lg + $spacing-normal );
+  }
+
+  // navbar height + loop header sm height + masonry spacing
+  .o-loop-header-small & {
+    top: ( $loop-header-top + $loop-header-sm + $spacing-normal );
+  }
+
+  .o-tour-hack-create-post-container {
+    @include responsive-page-container;
+
+    .o-tour-hack-create-post {
+      width: 40px;
+      height: 200px;
+      position: absolute;
+      right: -50px;
+    }
+
+    // Handle mobile
+    @media (max-width: 767px) {
+      position: fixed;
+      bottom:0px;
+      left:0px;
+      right:0px;
+      height: 60px;
+
+      .o-tour-hack-create-post {
+        position: relative;
+        height: 60px;
+        width: 60px;
+        margin: auto;
+        top: inherit;
+        left: inherit;
+        right: inherit;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../../variables";
+@import "../../../mixins";
+
+body {
+  &.o-page--loop--new {
+    background: $gradient-1;
+  }
+}
+
+.o-create-loop-page {
+  
+}
