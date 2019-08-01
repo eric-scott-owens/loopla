@@ -3,9 +3,12 @@ Open Source Files for the Loopla platform. Donated by Loopla Inc.
 
 Setup Directions
 ---------------
-Follow instructions found in `Documents/Computer-Setup.md`  
-Set configurations in settings_*.py files
-Set google ids and keys in index.html files
+Follow instructions found in [Documents/Computer-Setup.md](Documents/Computer-Setup.md)  
+
+Set configurations in settings_*.py files  
+
+Set google ids and keys in index.html files  
+
 
 Running locally
 ---------------
