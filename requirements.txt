@@ -19,7 +19,7 @@ Django==1.11.1
 django-allauth==0.32.0
 django-appconf==1.0.2
 django-bootstrap3==8.2.3
-django-debug-toolbar==1.9.1
+django-debug-toolbar==1.11.1
 django-extensions==1.9.8
 django-extra-fields==1.0.0
 django-filter==1.1.0
