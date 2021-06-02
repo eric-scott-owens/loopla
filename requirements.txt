@@ -85,6 +85,6 @@ six==1.11.0
 sqlparse==0.2.4
 stripe==2.25.0
 typing==3.6.2
-urllib3==1.22
+urllib3==1.26.5
 whitenoise==3.3.0
 wrapt==1.10.11
