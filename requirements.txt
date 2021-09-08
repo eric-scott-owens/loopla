@@ -59,7 +59,7 @@ packaging==16.8
 pbr==3.1.1
 phonenumberslite==8.8.1
 pilkit==2.0
-Pillow==4.1.1
+Pillow==8.3.2
 protobuf==3.5.0.post1
 pstat==0.0.1
 psutil==5.4.2
